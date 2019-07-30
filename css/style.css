@@ -1,0 +1,113 @@
+body {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: white;
+}
+
+
+/*MAIN WINDOW*/
+
+
+/*back decoration*/
+
+.wrapper {
+    background: url(../img/back_1.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.moon {
+    background: url(../img/moon.png) no-repeat bottom right;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/*Logo part*/
+
+.logo {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 75px;
+    padding-top: 25px;
+}
+
+.logo_plate {
+    background: url(../img/logo_plate.png) no-repeat top left;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.logo_text {
+    padding-left: 40px;
+}
+
+.logo_text h2 {
+    margin: auto;
+    font-size: 50px;
+    color: white;
+    line-height: 45px;
+    font-weight: 600;
+    font-weight: 500;
+}
+
+.logo_text h2 span {
+    text-transform: uppercase;
+}
+
+.logo_text p {
+    margin: auto;
+    color: #44b1dd;
+}
+
+.block_hero h2 {
+    margin-top: 460px;
+    color: #f1a23e;
+    font-size: 50px;
+    padding-left: 30%;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+.block_hero p span {
+    color: #f1a23e;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.block_hero p {
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 38px;
+    font-weight: 500;
+    position: relative;
+    margin: auto;
+}
+
+.yellow_box {
+    display: inline-block;
+    width: 110px;
+    height: 100px;
+    background-color: #f1a23e;
+    margin-left: 30%;
+    background-image: url(../img/text_icon.png);
+}
+
+
+/* .menu_bar {
+    width: 170px;
+    height: 1000px;
+    background-color: black;
+} */
