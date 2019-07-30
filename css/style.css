@@ -40,6 +40,7 @@ body {
     align-items: center;
     padding-left: 75px;
     padding-top: 25px;
+    z-index: 3;
 }
 
 .logo_plate {
@@ -48,6 +49,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 2;
 }
 
 .logo_text {
@@ -105,9 +107,12 @@ body {
     background-image: url(../img/text_icon.png);
 }
 
-
-/* .menu_bar {
-    width: 170px;
-    height: 1000px;
+.menu_bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 175px;
+    height: 100%;
     background-color: black;
-} */
+    z-index: 1;
+}
