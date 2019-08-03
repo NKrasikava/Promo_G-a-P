@@ -100,8 +100,7 @@
         margin-left: 30%;
         background-image: url(../img/text_icon.png);
     }
-    
-    .menu_bar {
+    /* .menu_bar {
         position: absolute;
         top: 0;
         left: 0;
@@ -109,7 +108,7 @@
         height: 100%;
         background-color: #020107;
         z-index: 1;
-    }
+    } */
     /*thin menu bar*/
     /* .menu_bar {
     position: absolute;
@@ -152,8 +151,7 @@
         text-align: center;
         margin: auto;
     }
-    
-    .team_1 {
+    /* .team_1 {
         background: url(../img/girl_1.png) no-repeat bottom;
         top: 100%;
         width: 100%;
@@ -162,7 +160,17 @@
         position: absolute;
     }
     
-    .text_1 {
+    .team_2 {
+        background: url(../img/guy_1.png) no-repeat bottom;
+        top: 100%;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        position: absolute;
+    }
+    
+    .text_1,
+    .text_2 {
         padding-top: 250px;
         width: 380px;
         text-align: left;
@@ -186,4 +194,4 @@
     
     .team_1 p {
         font-size: 18px;
-    }
+    } */
