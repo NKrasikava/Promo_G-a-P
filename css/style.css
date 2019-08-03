@@ -100,27 +100,9 @@
         margin-left: 30%;
         background-image: url(../img/text_icon.png);
     }
-    /* .menu_bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 180px;
-        height: 100%;
-        background-color: #020107;
-        z-index: 1;
-    } */
-    /*thin menu bar*/
-    /* .menu_bar {
-    position: absolute;
-    margin-left: 8.5%;
-    top: 0;
-    width: 20px;
-    height: 100%;
-    background-color: #020107;
-    z-index: 1;
-} */
+    /*Part_2_TEAM*/
     
-    .video {
+    .team {
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -128,7 +110,6 @@
         left: 0;
         position: absolute;
     }
-    /*Part_2_TEAM*/
     
     .team_bar {
         background: url(../img/board_team.png) no-repeat;
@@ -136,7 +117,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 3;
+        z-index: 2;
         position: absolute;
     }
     
