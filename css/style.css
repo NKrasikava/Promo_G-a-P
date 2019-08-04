@@ -6,7 +6,7 @@
         margin: auto;
         color: white;
     }
-    /*MAIN WINDOW*/
+    /*PArt_1_HELP*/
     /*back decoration*/
     
     .wrapper {
@@ -65,6 +65,7 @@
         margin: auto;
         color: #44b1dd;
     }
+    /*text plate_Become a Hero*/
     
     .block_hero h2 {
         margin: 460px auto 20px auto;
@@ -128,51 +129,6 @@
         font-weight: 600;
         text-transform: uppercase;
         z-index: 3;
-        top: 0;
+        padding-top: 30px;
         text-align: center;
-        margin: auto;
     }
-    /* .team_1 {
-        background: url(../img/girl_1.png) no-repeat bottom;
-        top: 100%;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-        position: absolute;
-    }
-    
-    .team_2 {
-        background: url(../img/guy_1.png) no-repeat bottom;
-        top: 100%;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-        position: absolute;
-    }
-    
-    .text_1,
-    .text_2 {
-        padding-top: 250px;
-        width: 380px;
-        text-align: left;
-        float: right;
-        padding-right: 80px;
-    }
-    
-    .team_1 h3 {
-        font-family: 'Bangers', cursive;
-        font-size: 60px;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin: auto;
-    }
-    
-    .team_1 h4 {
-        color: #f1a23e;
-        font-size: 18px;
-        text-transform: uppercase;
-    }
-    
-    .team_1 p {
-        font-size: 18px;
-    } */

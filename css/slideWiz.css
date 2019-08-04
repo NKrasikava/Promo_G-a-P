@@ -6,7 +6,7 @@
 }
 
 .slide-holder {
-    width: 1000px;
+    width: 1200px;
     height: auto;
     float: left;
     position: absolute;
@@ -90,10 +90,9 @@
     margin: 5px 0 5px 0;
     padding: 5px 0 5px 0;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    word-wrap: break-word;
+    font-family: 'Bangers', cursive;
+    font-size: 36px;
+    font-weight: 400;
     text-align: justify;
 }
 
@@ -102,9 +101,7 @@
     float: left;
     margin-top: 5px;
     color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    font-size: 15px;
-    word-wrap: break-word;
+    font-size: 24px;
 }
 
 
