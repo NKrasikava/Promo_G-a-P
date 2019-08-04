@@ -1,68 +1,75 @@
-jQuery(document).ready(function() {
+$(document).ready(function() {
+    var elem = document.getElementById('loader'); //обратились к элементу по id в html 
+    var canvas = elem.getContext('2d'); //обозначили, что контекст у нас будет двумерный (рисуем двумерную графику)
 
-    var el;
-    var options;
-    var canvas;
-    var span;
-    var ctx;
-    var radius;
-
-    var createCanvasVariable = function(id) { // get canvas
-        el = document.getElementById(id);
-    };
-
-    var createAllVariables = function() {
-        options = {
-            percent: el.getAttribute('data-percent') || 25,
-            size: el.getAttribute('data-size') || 165,
-            lineWidth: el.getAttribute('data-line') || 15,
-            rotate: el.getAttribute('data-rotate') || 0,
-            color: el.getAttribute('data-color')
-        };
-
-        canvas = document.createElement('canvas');
-        span = document.createElement('span');
-        span.textContent = options.percent + '%';
-
-        if (typeof(G_vmlCanvasManager) !== 'undefined') {
-            G_vmlCanvasManager.initElement(canvas);
-        }
-
-        ctx = canvas.getContext('2d');
-        canvas.width = canvas.height = options.size;
-
-        el.appendChild(span);
-        el.appendChild(canvas);
-
-        ctx.translate(options.size / 2, options.size / 2); // change center
-        ctx.rotate((-1 / 2 + options.rotate / 180) * Math.PI); // rotate -90 deg
-
-        radius = (options.size - options.lineWidth) / 2;
-    };
-
-
-    var drawCircle = function(color, lineWidth, percent) {
-        percent = Math.min(Math.max(0, percent || 1), 1);
-        ctx.beginPath();
-        ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, false);
-        ctx.strokeStyle = color;
-        ctx.lineCap = 'square'; // butt, round or square
-        ctx.lineWidth = lineWidth;
-        ctx.stroke();
-    };
-
-    var drawNewGraph = function(id) {
-        el = document.getElementById(id);
-        createAllVariables();
-        drawCircle('#efefef', options.lineWidth, 100 / 100);
-        drawCircle(options.color, options.lineWidth, options.percent / 100);
-
-
-    };
-    drawNewGraph('graph1');
-    drawNewGraph('graph2');
-    drawNewGraph('graph3');
-    drawNewGraph('graph4');
+    canvas.lineWidth = 15; //толщина линии окружности
+    canvas.lineCap = "round"; // скругления окончания линии
+    canvas.strokeStyle = '#f1a23e';
+    canvas.beginPath();
+    canvas.arc(250, 250, 100, -90 * Math.PI / 180, 180 * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.stroke();
 
 
 });
+
+// $(document).ready(function() {
+//     fillProgressBar('loader', '#f66', 80, 'Fija 1');
+//     newProgressBar('myCanvas');
+//     fillProgressBar('myCanvas', '#7c7', 50, 'Dinámica 1');
+//     newProgressBar('myCanvas2');
+//     fillProgressBar('myCanvas2', '#3375aa', 10, 'Dinámica 2');
+// });
+
+// function newProgressBar(id) {
+//     var newProgress = document.createElement('div');
+//     $(newProgress).addClass("progress");
+//     var newContent = document.createElement('div');
+//     $(newContent).addClass("content");
+//     $(newContent).attr("id", id + "_div");
+
+//     var newCanvas =
+//         $('<canvas/>', {
+//             'id': id
+//         });
+//     newCanvas.attr("width", 250);
+//     newCanvas.attr("height", 250);
+
+//     $(newProgress).append(newContent);
+//     $(newProgress).append(newCanvas);
+//     $('.container').append(newProgress);
+// }
+
+// function fillProgressBar(id, color, progress, text) {
+//     var p = 0;
+//     var interval = setInterval(function() {
+
+//         var canvas = document.getElementById(id);
+//         var context = canvas.getContext('2d');
+//         var x = canvas.width / 2;
+//         var y = canvas.height / 2;
+//         var radius = 100;
+//         var startAngle = 1.5 * Math.PI;
+//         var endAngle = 1.5 * Math.PI + (2 * Math.PI) * p / 100;
+//         var counterClockwise = false;
+
+//         if (progress == null)
+//             progress = 100;
+
+//         context.clearRect(0, 0, 250, 250);
+
+//         context.beginPath();
+//         context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+//         context.lineWidth = 20;
+//         context.strokeStyle = color;
+//         context.stroke();
+
+//         if (text == null)
+//             text = "HOLA";
+
+//         $('#' + id + '_div').text(text);
+
+//         if (p == progress)
+//             clearInterval(interval);
+//         p++;
+//     }, 10);
+// }
