@@ -1,5 +1,6 @@
 var canvas; // глобальная переменная
 var step = 5;
+var time_deltay = 1000;
 
 $(document).ready(function() { //обработчик события загрузки страницы
     var elem = document.getElementById('loader'); //обратились к элементу по id в html 
@@ -27,7 +28,7 @@ $(document).ready(function() { //обработчик события загру�
     canvas.fillStyle = "white";
     canvas.fillText("75%", 255, 265);
 
-    drawProgress(75, 90);
+    doProgress(75, 92);
 });
 
 function sleep(milliseconds) {
@@ -39,18 +40,43 @@ function sleep(milliseconds) {
     }
 }
 
-
 function drawProgress(go, end) {
-    console.log("drawProgress");
-    while (go <= end) {
-        sleep(2000);
-        var goDegree = (360 / 100) * go - 90;
-        var next = (360 / 100) * (go + step) - 90;
-        canvas.beginPath();
-        canvas.arc(250, 250, 70, goDegree * Math.PI / 180, next * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
-        console.log("goDegree: ", goDegree, " next: ", next);
-        canvas.stroke();
-        console.log("go: ", go, " next: ", go + step);
-        go = go + step;
+    console.log("drawProgress ", new Date().getTime());
+    // while (go <= end) {
+    // sleep(2000);
+    var goDegree = (360 / 100) * go - 90;
+    var endDegree = (360 / 100) * (end) - 90;
+    canvas.beginPath();
+    canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    // console.log("goDegree: ", goDegree, " next: ", next);
+    canvas.stroke();
+    // console.log("go: ", go, " next: ", go + step);
+    //     go = go + step;
+    // }
+}
+
+function doProgress(go, end) {
+    var sleep = 0;
+    while (go < end) {
+        // sleep(2000);
+        // var goDegree = (360 / 100) * go - 90;
+        // var next = (360 / 100) * (go + step) - 90;
+        // canvas.beginPath();
+        // canvas.arc(250, 250, 70, goDegree * Math.PI / 180, next * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+        // console.log("goDegree: ", goDegree, " next: ", next);
+        // canvas.stroke();
+
+        //sleep(200);
+        if (step > end - go) {
+            step = end - go;
+        }
+        next = go + step;
+        setTimeout(this.drawProgress, sleep, go, next);
+        sleep += time_deltay;
+
+        go = next;
+        //drawProgress(go, end)
+        console.log("go: ", go, " next: ", next, " sleep: ", sleep);
+
     }
 }
