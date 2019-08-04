@@ -33,15 +33,6 @@ $(document).ready(function() { //обработчик события загру�
 });
 
 // ПРОГРАММИРОВАНИЕ ПРОЦЕССА ЗАГРУЗКИ
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > milliseconds) {
-            break;
-        }
-    }
-}
-
 function writeText(text) {
     // затирае старое значение процентов
     canvas.fillStyle = "black"; //большой круг
