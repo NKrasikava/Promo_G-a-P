@@ -1,6 +1,6 @@
 var canvas; // глобальная переменная
-var step = 5;
-var time_deltay = 1000;
+var step = 1;
+var time_deltay = 100;
 
 $(document).ready(function() { //обработчик события загрузки страницы
     var elem = document.getElementById('loader'); //обратились к элементу по id в html 
@@ -41,42 +41,39 @@ function sleep(milliseconds) {
 }
 
 function drawProgress(go, end) {
-    console.log("drawProgress ", new Date().getTime());
-    // while (go <= end) {
-    // sleep(2000);
+    // console.log("drawProgress ", new Date().getTime());
+    // пересчитаем проценты в градусы
     var goDegree = (360 / 100) * go - 90;
     var endDegree = (360 / 100) * (end) - 90;
+
+    // дорисовываем проценты от значения go до значения end
     canvas.beginPath();
-    canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
-    // console.log("goDegree: ", goDegree, " next: ", next);
+    canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
     canvas.stroke();
-    // console.log("go: ", go, " next: ", go + step);
-    //     go = go + step;
-    // }
+
+    // затирае старое значение процентов
+    canvas.fillStyle = "black"; //большой круг
+    canvas.beginPath();
+    canvas.arc(250, 250, 60, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.fill();
+
+    // пишем новое значение
+    canvas.fillStyle = "white";
+    canvas.fillText(end.toString() + "%", 255, 265);
 }
 
 function doProgress(go, end) {
+    // в цикле задаем последовательность вызовов фенкции для обновления процентов прогресса
     var sleep = 0;
     while (go < end) {
-        // sleep(2000);
-        // var goDegree = (360 / 100) * go - 90;
-        // var next = (360 / 100) * (go + step) - 90;
-        // canvas.beginPath();
-        // canvas.arc(250, 250, 70, goDegree * Math.PI / 180, next * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
-        // console.log("goDegree: ", goDegree, " next: ", next);
-        // canvas.stroke();
-
-        //sleep(200);
         if (step > end - go) {
             step = end - go;
         }
         next = go + step;
         setTimeout(this.drawProgress, sleep, go, next);
         sleep += time_deltay;
-
         go = next;
-        //drawProgress(go, end)
-        console.log("go: ", go, " next: ", next, " sleep: ", sleep);
+        // console.log("go: ", go, " next: ", next, " sleep: ", sleep);
 
     }
 }
