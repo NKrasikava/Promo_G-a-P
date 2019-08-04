@@ -2,13 +2,27 @@ $(document).ready(function() {
     var elem = document.getElementById('loader'); //обратились к элементу по id в html 
     var canvas = elem.getContext('2d'); //обозначили, что контекст у нас будет двумерный (рисуем двумерную графику)
 
-    canvas.lineWidth = 15; //толщина линии окружности
+    canvas.lineWidth = 12; //толщина линии окружности
     canvas.lineCap = "round"; // скругления окончания линии
-    canvas.strokeStyle = '#f1a23e';
+    canvas.fillStyle = "black"; //большой круг
     canvas.beginPath();
-    canvas.arc(250, 250, 100, -90 * Math.PI / 180, 180 * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.arc(250, 250, 90, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.fill();
+
+    canvas.strokeStyle = 'white'; //остаток круга
+    canvas.beginPath();
+    canvas.arc(250, 250, 70, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.stroke();
 
+    canvas.strokeStyle = 'red'; // прогресс
+    canvas.beginPath();
+    canvas.arc(250, 250, 70, -90 * Math.PI / 180, 180 * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.stroke();
+
+    canvas.font = "bold 44px verdana sans-serif";
+    canvas.textAlign = "center";
+    canvas.fillStyle = "white";
+    canvas.fillText("75%", 255, 265);
 
 });
 
