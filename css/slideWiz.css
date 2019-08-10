@@ -14,6 +14,7 @@
     object-fit: contain;
     bottom: 0;
     padding-left: 5%;
+    z-index: 10;
 }
 
 

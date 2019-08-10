@@ -1,12 +1,13 @@
     body {
         font-family: 'Palanquin Dark', sans-serif;
         font-size: 24px;
-        max-width: 1920px;
-        width: 100%;
+        max-width: 1900px;
         height: 100vh;
-        margin: auto;
-        background-color: black;
-        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        color: white;
+        background-color: #0003;
     }
     /*PArt_1_HELP*/
     /*back decoration*/
@@ -15,15 +16,14 @@
         background: url(../img/back_1.jpg) no-repeat;
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
     
     .moon {
-        background: url(../img/moon.png) no-repeat;
+        /* background: url(../img/moon.png) no-repeat; */
         width: 100%;
         height: 100%;
-        margin-left: 395px;
-        margin-top: 455px;
+        margin-left: 372px;
     }
     /*Logo part*/
     
@@ -41,9 +41,8 @@
         background: url(../img/logo_plate.png) no-repeat top left;
         top: 0;
         width: 100%;
-        height: 100%;
+        height: 30vh;
         position: absolute;
-        z-index: 2;
     }
     
     .logo_text {
@@ -55,6 +54,7 @@
         font-size: 50px;
         line-height: 45px;
         font-weight: 500;
+        z-index: 2;
     }
     
     .logo_text h2 span {
@@ -72,7 +72,7 @@
     /*text plate_Become a Hero*/
     
     .block_hero h2 {
-        margin: 460px auto 20px auto;
+        margin: 260px auto auto auto;
         color: #f1a23e;
         font-size: 50px;
         padding-left: 30%;
@@ -109,21 +109,24 @@
     /*Part_2_TEAM*/
     
     .team {
+        max-width: 1900px;
+        max-height: 1180px;
         width: 100%;
         height: 100%;
         overflow: hidden;
         position: absolute;
+        top: 1180px;
+        left: 0;
     }
     
-    video {
-        max-width: 1920px;
-        height: 100%;
+    .video {
         width: 100%;
+        height: auto;
+        position: absolute;
     }
-    
-    .team_bar {
+    /* .team_bar {
         background: url(../img/board_team.png) no-repeat;
-        top: 100%;
+        top: 110%;
         left: 0;
         width: 100%;
         height: 100%;
@@ -140,4 +143,4 @@
         z-index: 3;
         padding-top: 30px;
         text-align: center;
-    }
+    } */
