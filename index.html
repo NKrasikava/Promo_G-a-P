@@ -9,21 +9,28 @@
     <title>Get-a-Pet - animal shelter</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link href="css/slideWiz.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+    <!-- <link href="css/slideWiz.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- <script src="js/jquery-ui.min.js"></script> -->
     <script src="js/slideWiz.js"></script>
     <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
 
+
 </head>
 
+
+
 <body>
+
     <div class="wrapper">
-        <header>
+
+
+        <!-- <header>
             <div class="logo_plate"></div>
             <div class="logo">
                 <div class="pic">
@@ -34,15 +41,39 @@
                     <p>helps pets find homes</p>
                 </div>
             </div>
-        </header>
+        </header> -->
+        
+        
+
+        <div>
+
+        <input id="ShowDonateProgress"  type="submit" value="Donate"/>
+        <form id="Donate" action="">
+                How much to donate: <input type="text" name="Amount" value="5"><br>
+                Phone: 
+                <input type="radio" name="MTS" value="MTS"> MTS 
+                <input type="radio" name="A1" value="A1"> A1
+                <input type="radio" name="Life:)" value="Life:)"> Life:)<br>
+                <input type="text" name="Amount" value="+375">
+                <input type="submit" value="Donate">
+              </form> 
+        </div>
+        
+
         <canvas id="loader" width="400" height="400"></canvas>
         <div class="block_hero">
             <h2>Become a hero!</h2>
             <div class="yellow_box"></div>
             <p><span>support animals</span><br> with your monthly gift<br> to our lifesaving work!</p>
         </div>
-        <div id="moon"></div>
-    </div>
+        
+        <nav>
+            <div class="menu_bar">                
+            </div>
+        </nav>
+
+
+        <div class="moon"></div>
     </div>
     <main>
         <div class="team_bar">
@@ -55,6 +86,7 @@
             <div class="video">
                 <video autoplay loop muted poster="video/back.jpg" class="back_video">
                     <source src="video/space.mp4" type="video/mp4">
+                    <!--нужны и другие форматы этого же видео для кроссбраузерности-->
                 </video>
             </div>
         </div>
