@@ -1,9 +1,8 @@
     body {
         font-family: 'Palanquin Dark', sans-serif;
         font-size: 24px;
-        width: 1920px;
         max-width: 1920px;
-        height: auto;
+        height: 100%;
         margin: auto;
         color: white;
         background-color: #000003;
@@ -23,6 +22,8 @@
     /*back decoration*/
     
     .wrapper {
+        left: 0;
+        top: 0;
         background: url(../img/back_1.jpg);
         position: absolute;
         width: 100%;
@@ -127,6 +128,12 @@
     
     #Donate {
         display: none;
+    }
+    
+    .rocketdog {
+        background: url(../img/rocket.png) no-repeat;
+        z-index: 10;
+        height: 100%;
     }
     /*Part_2_TEAM*/
     

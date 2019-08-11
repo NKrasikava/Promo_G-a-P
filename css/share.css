@@ -50,8 +50,8 @@ a:nth-of-type(3) {
 }
 
 a {
-    -webkit-transform: scale(0) translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 0.0001s linear, background 0.0001s ease;
+    transform: scale(0) translate3d(0, 0, 0);
+    transition: -webkit-transform 0.0001s linear, background 0.0001s ease;
 }
 
 
@@ -59,21 +59,21 @@ a {
 
 div:hover i {
     height: 190px;
-    -webkit-transition: height 0.0001s linear;
-    -webkit-transition-duration: .3s;
+    transition: height 0.0001s linear;
+    transition-duration: .3s;
 }
 
 div:hover a {
     background-color: #FFFF33;
-    -webkit-transform: scale(1) translate3d(0, 0, 0);
-    -webkit-transition-delay: 0.1s, 0.0001s;
-    -webkit-transition-duration: 0.3s, 0.4s;
+    transform: scale(1) translate3d(0, 0, 0);
+    transition-delay: 0.1s, 0.0001s;
+    transition-duration: 0.3s, 0.4s;
 }
 
 div:hover a:nth-of-type(2) {
-    -webkit-transition-delay: 0.2s, 0.0001s;
+    transition-delay: 0.2s, 0.0001s;
 }
 
 div:hover a:nth-of-type(3) {
-    -webkit-transition-delay: 0.3s, 0.001s;
+    transition-delay: 0.3s, 0.001s;
 }
