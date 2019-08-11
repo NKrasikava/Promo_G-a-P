@@ -2,7 +2,7 @@
         font-family: 'Palanquin Dark', sans-serif;
         font-size: 24px;
         max-width: 1900px;
-        height: 100vh;
+        /* height: 100vh; */
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -16,11 +16,11 @@
         background: url(../img/back_1.jpg) no-repeat;
         position: absolute;
         width: 100%;
-        height: auto;
+        height: 100vh;
     }
     
-    .moon {
-        /* background: url(../img/moon.png) no-repeat; */
+    #moon {
+        background: url(../img/moon.png) no-repeat;
         width: 100%;
         height: 100%;
         margin-left: 372px;
@@ -70,9 +70,7 @@
         margin-left: 30%;
     }
     /*text plate_Become a Hero*/
-    
-    .block_hero h2 {
-        margin: 260px auto auto auto;
+    /* .block_hero h2 {
         color: #f1a23e;
         font-size: 50px;
         padding-left: 30%;
@@ -104,7 +102,7 @@
         background-color: #f1a23e;
         margin-left: 30%;
         background-image: url(../img/text_icon.png);
-    }
+    } */
     /*Rocket part*/
     /*Part_2_TEAM*/
     
