@@ -1,10 +1,11 @@
 var canvas; // глобальная переменная
 var step = 1;
 var time_deltay = 100;
+var DonateProgress_value = 0;
+
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
-
-
+    $('#before-load').find('span').fadeOut().end().delay(500).fadeOut('slow'); /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
     //SLIDER
     var mySlides = [{
         src: {
@@ -56,14 +57,42 @@ $(document).ready(function() { // функции выполняются посл
         speed: 5000,
         type: 'slice'
     });
-    drawLoadB();
+
+    $("#ShowDonateProgress").click(ShowDonateForm);
+    $("#Donate").on('submit', ProcessDonate);
+
 });
 
+function ShowDonateForm() {
+    DonateProgress_value = 75;
+    $("#Donate").css("display", "block");
+    drawEmptyProgress();
+    doProgress(0, DonateProgress_value);
+}
 
+function ProcessDonate(event) {
+    event.preventDefault(); //  чтобы не перерисовывать страницу
+
+    console.log("Amount: ", $("input[name=Amount]").val());
+    var donate_val = $("input[name=Amount]").val();
+
+    if (donate_val > 0) {
+        Next_val = DonateProgress_value + parseInt(donate_val);
+        console.log("donate_val: ", donate_val);
+        console.log("Next_val: ", Next_val);
+        if (Next_val > 100) {
+            Next_val = 100;
+        }
+        console.log("Next_val 2: ", Next_val);
+
+        console.log("doProgress(", DonateProgress_value, ",", Next_val, ")");
+        doProgress(DonateProgress_value, Next_val);
+        DonateProgress_value = Next_val;
+    }
+}
 
 // ЗАГРУЗКА "ПРЯЧУЩЕЙСЯ" КНОКПИ ПРОГРЕССА
-function drawLoadB() {
-    //DRAW PROGRESS BAR IN CANVAS
+function drawEmptyProgress() {
     var elem = document.getElementById('loader'); //обратились к элементу по id в html 
     canvas = elem.getContext('2d'); //обозначили, что контекст у нас будет двумерный (рисуем двумерную графику)
 
@@ -79,17 +108,7 @@ function drawLoadB() {
     canvas.arc(250, 250, 70, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.stroke();
 
-    canvas.strokeStyle = 'red'; // прогресс
-    canvas.beginPath();
-    canvas.arc(250, 250, 70, -90 * Math.PI / 180, 180 * Math.PI / 180, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
-    canvas.stroke();
-
-    canvas.font = "bold 34px Arial";
-    canvas.textAlign = "center";
-    canvas.fillStyle = "white";
-    canvas.fillText("75%", 255, 265);
-
-    doProgress(75, 100);
+    writeText("0%")
 }
 
 //ПРОГРАММИРУЕМ РАБОТУ КНОПКИ ПРОГРЕССА
@@ -112,6 +131,7 @@ function drawProgress(go, end) {
     var endDegree = (360 / 100) * (end) - 90;
 
     // дорисовываем проценты от значения go до значения end
+    canvas.strokeStyle = 'red';
     canvas.beginPath();
     canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
     canvas.stroke();

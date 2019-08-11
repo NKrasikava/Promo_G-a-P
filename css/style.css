@@ -1,29 +1,43 @@
     body {
         font-family: 'Palanquin Dark', sans-serif;
         font-size: 24px;
-        max-width: 1900px;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
+        width: 1920px;
+        max-width: 1920px;
+        height: auto;
+        margin: auto;
         color: white;
-        background-color: #0003;
+        background-color: #000003;
+    }
+    /*LOADER_LOGO*/
+    
+    #before-load {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../loading_animate/logo.gif') no-repeat;
+        z-index: 20;
     }
     /*PArt_1_HELP*/
     /*back decoration*/
     
     .wrapper {
-        background: url(../img/back_1.jpg) no-repeat;
+        background: url(../img/back_1.jpg);
         position: absolute;
         width: 100%;
-        height: auto;
+        height: 100%;
+        /* overflow: hidden; */
     }
     
     .moon {
-        /* background: url(../img/moon.png) no-repeat; */
+        background: url(../img/moon.png) no-repeat bottom right;
+        bottom: 0;
+        right: 0;
         width: 100%;
-        height: 100%;
-        margin-left: 372px;
+        height: 30%;
+        position: absolute;
+        z-index: 1;
     }
     /*Logo part*/
     
@@ -41,8 +55,9 @@
         background: url(../img/logo_plate.png) no-repeat top left;
         top: 0;
         width: 100%;
-        height: 30vh;
+        height: 100%;
         position: absolute;
+        z-index: 2;
     }
     
     .logo_text {
@@ -54,7 +69,6 @@
         font-size: 50px;
         line-height: 45px;
         font-weight: 500;
-        z-index: 2;
     }
     
     .logo_text h2 span {
@@ -72,7 +86,7 @@
     /*text plate_Become a Hero*/
     
     .block_hero h2 {
-        margin: 260px auto auto auto;
+        margin: 460px auto 20px auto;
         color: #f1a23e;
         font-size: 50px;
         padding-left: 30%;
@@ -106,27 +120,28 @@
         background-image: url(../img/text_icon.png);
     }
     /*Rocket part*/
+    
+    #ShowDonateProgress {
+        z-index: 2;
+    }
+    
+    #Donate {
+        display: none;
+    }
     /*Part_2_TEAM*/
     
     .team {
-        max-width: 1900px;
-        max-height: 1180px;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        position: absolute;
-        top: 1180px;
+        top: 100%;
         left: 0;
+        position: absolute;
     }
     
-    .video {
-        width: 100%;
-        height: auto;
-        position: absolute;
-    }
-    /* .team_bar {
+    .team_bar {
         background: url(../img/board_team.png) no-repeat;
-        top: 110%;
+        top: 100%;
         left: 0;
         width: 100%;
         height: 100%;
@@ -143,4 +158,6 @@
         z-index: 3;
         padding-top: 30px;
         text-align: center;
-    } */
+    }
+    
+    s
