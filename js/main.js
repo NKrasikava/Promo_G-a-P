@@ -3,9 +3,9 @@ var step = 1;
 var time_deltay = 100;
 var DonateProgress_value = 0;
 
+
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
-
-
+    $('#before-load').find('span').fadeOut().end().delay(500).fadeOut('slow'); /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
     //SLIDER
     var mySlides = [{
         src: {
@@ -56,36 +56,36 @@ $(document).ready(function() { // функции выполняются посл
         auto: true,
         speed: 5000,
         type: 'slice'
-    });    
-    
-    $("#ShowDonateProgress").click(ShowDonateForm); 
-    $("#Donate").on('submit', ProcessDonate); 
+    });
+
+    $("#ShowDonateProgress").click(ShowDonateForm);
+    $("#Donate").on('submit', ProcessDonate);
 
 });
 
-function ShowDonateForm(){
+function ShowDonateForm() {
     DonateProgress_value = 75;
     $("#Donate").css("display", "block");
     drawEmptyProgress();
     doProgress(0, DonateProgress_value);
 }
 
-function ProcessDonate(event){
+function ProcessDonate(event) {
     event.preventDefault(); //  чтобы не перерисовывать страницу
 
-    console.log("Amount: ",$("input[name=Amount]").val());
-    var donate_val=$("input[name=Amount]").val();
-    
-    if(donate_val > 0){
+    console.log("Amount: ", $("input[name=Amount]").val());
+    var donate_val = $("input[name=Amount]").val();
+
+    if (donate_val > 0) {
         Next_val = DonateProgress_value + parseInt(donate_val);
-        console.log("donate_val: ",donate_val);
-        console.log("Next_val: ",Next_val);
-        if (Next_val > 100){
+        console.log("donate_val: ", donate_val);
+        console.log("Next_val: ", Next_val);
+        if (Next_val > 100) {
             Next_val = 100;
         }
-        console.log("Next_val 2: ",Next_val);
+        console.log("Next_val 2: ", Next_val);
 
-        console.log("doProgress(",DonateProgress_value, ",", Next_val,")");
+        console.log("doProgress(", DonateProgress_value, ",", Next_val, ")");
         doProgress(DonateProgress_value, Next_val);
         DonateProgress_value = Next_val;
     }

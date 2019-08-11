@@ -8,6 +8,17 @@
         color: white;
         background-color: #000003;
     }
+    /*LOADER_LOGO*/
+    
+    #before-load {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../loading_animate/logo.gif') no-repeat;
+        z-index: 20;
+    }
     /*PArt_1_HELP*/
     /*back decoration*/
     
@@ -109,6 +120,14 @@
         background-image: url(../img/text_icon.png);
     }
     /*Rocket part*/
+    
+    #ShowDonateProgress {
+        z-index: 2;
+    }
+    
+    #Donate {
+        display: none;
+    }
     /*Part_2_TEAM*/
     
     .team {
@@ -140,11 +159,5 @@
         padding-top: 30px;
         text-align: center;
     }
-
-    #ShowDonateProgress {
-        z-index: 2;
-    }
-
-    #Donate {
-        display: none;        
-    }
+    
+    s
