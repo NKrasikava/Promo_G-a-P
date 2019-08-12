@@ -127,9 +127,12 @@
    }
    
    .rocketdog {
-       background: url(../img/rocket.png) no-repeat;
+       background: url(../img/rocket.png) no-repeat bottom;
+       right: 0;
+       width: 600px;
        height: 100%;
-       margin: 0 0 0 70%;
+       position: absolute;
+       z-index: 3;
    }
    /*Part_2_TEAM*/
    /* Стили для видеофона */
