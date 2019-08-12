@@ -1,209 +1,221 @@
-   /*LOADER_LOGO*/
-   
-   #before-load {
-       position: fixed;
-       left: 0;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       background: url('../loading_animate/logo.gif') no-repeat;
-       z-index: 20;
-   }
-   
-   body {
-       font-family: 'Palanquin Dark', sans-serif;
-       font-size: 24px;
-       width: 100%;
-       height: 100%;
-       margin: auto;
-       color: white;
-       background-color: #000003;
-   }
-   /*PArt_1_HELP*/
-   /*back decoration*/
-   
-   .wrapper {
-       background: url(../img/back_1.jpg);
-       position: absolute;
-       width: 100%;
-       height: 100%;
-   }
-   
-   .moon {
-       background: url(../img/moon.png) no-repeat bottom right;
-       bottom: 0;
-       right: 0;
-       width: 100%;
-       height: 30%;
-       position: absolute;
-       z-index: 1;
-   }
-   /*Logo part*/
-   
-   .logo {
-       position: absolute;
-       display: flex;
-       justify-content: flex-start;
-       align-items: center;
-       padding-left: 75px;
-       padding-top: 25px;
-       z-index: 3;
-   }
-   
-   .logo_plate {
-       background: url(../img/logo_plate.png) no-repeat;
-       width: 100%;
-       height: 100%;
-       position: absolute;
-   }
-   
-   .logo_text {
-       padding-left: 40px;
-   }
-   
-   .logo_text h2 {
-       margin: auto;
-       font-size: 50px;
-       line-height: 45px;
-       font-weight: 500;
-   }
-   
-   .logo_text h2 span {
-       text-transform: uppercase;
-   }
-   
-   .logo_text p {
-       margin: auto;
-       color: #44b1dd;
-   }
-   
-   #loader {
-       margin-left: 30%;
-   }
-   /*text plate_Become a Hero*/
-   
-   .block_hero h2 {
-       margin: auto;
-       color: #f1a23e;
-       font-size: 50px;
-       padding-left: 30%;
-       line-height: 50px;
-       font-weight: 600;
-       text-transform: uppercase;
-       text-decoration: underline;
-   }
-   
-   .block_hero p span {
-       color: #f1a23e;
-       font-size: 28px;
-       text-transform: uppercase;
-   }
-   
-   .block_hero p {
-       display: inline-block;
-       padding-left: 30px;
-       line-height: 38px;
-       font-weight: 500;
-       position: relative;
-       margin: auto;
-   }
-   
-   .yellow_box {
-       display: inline-block;
-       width: 110px;
-       height: 100px;
-       background-color: #f1a23e;
-       margin-left: 30%;
-       background-image: url(../img/text_icon.png);
-   }
-   /*Rocket part*/
-   
-   #ShowDonateProgress {
-       z-index: 2;
-   }
-   
-   #Donate {
-       display: none;
-   }
-   
-   .rocketdog {
-       background: url(../img/rocket.png) no-repeat bottom;
-       right: 0;
-       width: 600px;
-       height: 100%;
-       position: absolute;
-       z-index: 3;
-   }
-   /*Part_2_TEAM*/
-   /* Стили для видеофона */
-   
-   #video-bg {
-       /* position: fixed; */
-       position: absolute;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       left: 0;
-       overflow: hidden;
-       z-index: 1;
-       background: url(video/space.jpg) no-repeat;
-       background-size: cover;
-   }
-   
-   #video-bg>video {
-       position: absolute;
-       top: 0;
-       left: 0;
-       min-width: 100%;
-       min-height: 100%;
-       width: auto;
-       height: auto;
-   }
-   /* Проверка на поддержку свойства object-fit: */
-   
-   @supports (object-fit: cover) {
-       #video-bg>video {
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-       }
-   }
-   /* Отключение видео для устройств с размером экрана менее 800px: */
-   
-   @media screen and (max-device-width: 800px) {
-       #video-bg>video {
-           display: none;
-       }
-   }
-   
-   .team {
-       width: 100%;
-       height: 100%;
-       overflow: hidden;
-       top: 100%;
-       left: 0;
-       position: absolute;
-   }
-   
-   .team_bar {
-       background: url(../img/board_team.png) repeat-x;
-       top: 100%;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       z-index: 2;
-       position: absolute;
-   }
-   
-   .team_bar h2 {
-       width: 100%;
-       position: absolute;
-       font-size: 45px;
-       font-weight: 600;
-       text-transform: uppercase;
-       z-index: 3;
-       padding-top: 30px;
-       text-align: center;
-   }
+  /*LOADING...*/
+  
+  #before-load {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../loading_animate/logo.gif') no-repeat;
+      z-index: 20;
+  }
+  /*SITE*/
+  
+  body {
+      font-family: 'Palanquin Dark', sans-serif;
+      font-size: 24px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      color: white;
+      background-color: #000003;
+  }
+  /*PArt_1_HELP*/
+  /*back decoration*/
+  
+  .wrapper {
+      /* background: url(../img/back_1.jpg); */
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .moon {
+      background: url(../img/moon.png) no-repeat bottom right;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+  }
+  /*Logo part*/
+  
+  .logo {
+      position: absolute;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 75px;
+      padding-top: 25px;
+      z-index: 3;
+  }
+  
+  .logo_plate {
+      background: url(../img/logo_plate.png) no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+  }
+  
+  .logo_text {
+      padding-left: 40px;
+  }
+  
+  .logo_text h2 {
+      margin: auto;
+      font-size: 50px;
+      line-height: 45px;
+      font-weight: 500;
+  }
+  
+  .logo_text h2 span {
+      text-transform: uppercase;
+  }
+  
+  .logo_text p {
+      margin: auto;
+      color: #44b1dd;
+  }
+  
+  #loader {
+      margin-left: 30%;
+  }
+  /*text plate_Become a Hero*/
+  
+  .block_hero h2 {
+      margin: auto;
+      color: #f1a23e;
+      font-size: 50px;
+      padding-left: 30%;
+      line-height: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: underline;
+  }
+  
+  .block_hero p span {
+      color: #f1a23e;
+      font-size: 28px;
+      text-transform: uppercase;
+  }
+  
+  .block_hero p {
+      display: inline-block;
+      padding-left: 30px;
+      line-height: 38px;
+      font-weight: 500;
+      position: relative;
+      margin: auto;
+  }
+  
+  .yellow_box {
+      display: inline-block;
+      width: 110px;
+      height: 100px;
+      background-color: #f1a23e;
+      margin-left: 30%;
+      background-image: url(../img/text_icon.png);
+  }
+  /*Menu_navigation*/
+  
+  .menu_bar {
+      color: black;
+      width: 150px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  /*Rocket part*/
+  
+  #ShowDonateProgress {
+      z-index: 2;
+  }
+  
+  #Donate {
+      display: none;
+  }
+  
+  .rocketdog {
+      background: url(../img/rocket.png) no-repeat bottom;
+      right: 0;
+      width: 700px;
+      height: 90%;
+      position: absolute;
+      z-index: 3;
+  }
+  /*Part_2_TEAM*/
+  /* Стили для видеофона */
+  
+  #video-bg {
+      position: fixed;
+      /* position: absolute; */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+      background: url(video/space.jpg) no-repeat;
+      background-size: cover;
+  }
+  
+  #video-bg>video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+  }
+  /* Проверка на поддержку свойства object-fit: */
+  
+  @supports (object-fit: cover) {
+      #video-bg>video {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  }
+  /* Отключение видео для устройств с размером экрана менее 800px: */
+  
+  @media screen and (max-device-width: 800px) {
+      #video-bg>video {
+          display: none;
+      }
+  }
+  
+  .team {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 100%;
+      left: 0;
+      position: absolute;
+  }
+  
+  .team_bar {
+      background: url(../img/board_team.png) repeat-x;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      position: absolute;
+  }
+  
+  .team_bar h2 {
+      width: 100%;
+      position: absolute;
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: uppercase;
+      z-index: 3;
+      padding-top: 30px;
+      text-align: center;
+  }
