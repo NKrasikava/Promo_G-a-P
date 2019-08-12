@@ -1,7 +1,7 @@
     body {
         font-family: 'Palanquin Dark', sans-serif;
         font-size: 24px;
-        max-width: 1920px;
+        width: 100%;
         height: 100%;
         margin: auto;
         color: white;
@@ -28,7 +28,6 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        /* overflow: hidden; */
     }
     
     .moon {
@@ -53,12 +52,10 @@
     }
     
     .logo_plate {
-        background: url(../img/logo_plate.png) no-repeat top left;
-        top: 0;
+        background: url(../img/logo_plate.png) no-repeat;
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: 2;
     }
     
     .logo_text {
@@ -87,7 +84,7 @@
     /*text plate_Become a Hero*/
     
     .block_hero h2 {
-        margin: 460px auto 20px auto;
+        margin: auto;
         color: #f1a23e;
         font-size: 50px;
         padding-left: 30%;
@@ -132,10 +129,52 @@
     
     .rocketdog {
         background: url(../img/rocket.png) no-repeat;
-        z-index: 10;
         height: 100%;
+        margin: 0 0 0 70%;
     }
     /*Part_2_TEAM*/
+    /* Стили для видеофона */
+    
+    #video-bg {
+        /* position: fixed; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        background: url(video/space.jpg) no-repeat;
+        background-size: cover;
+    }
+    
+    #video-bg>video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    /* Проверка на поддержку свойства object-fit: */
+    
+    @supports (object-fit: cover) {
+        #video-bg>video {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    /* Отключение видео для устройств с размером экрана менее 800px: */
+    
+    @media screen and (max-device-width: 800px) {
+        #video-bg>video {
+            display: none;
+        }
+    }
     
     .team {
         width: 100%;
@@ -166,5 +205,3 @@
         padding-top: 30px;
         text-align: center;
     }
-    
-    s

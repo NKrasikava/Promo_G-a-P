@@ -25,15 +25,15 @@
 
 
 <body>
-    <!-- LOADING_LOGO -->
-    <div id="before-load">
-        <span></span>
-    </div>
 
     <div class="wrapper">
+        <!-- LOADING_LOGO -->
+        <div id="before-load">
+            <span></span>
+        </div>
 
 
-        <!-- <header>
+        <header>
             <div class="logo_plate"></div>
             <div class="logo">
                 <div class="pic">
@@ -44,7 +44,7 @@
                     <p>helps pets find homes</p>
                 </div>
             </div>
-        </header> -->
+        </header>
 
         <!-- <nav>
             <div class="menu_bar">
@@ -52,18 +52,6 @@
         </nav> -->
 
         <!-- ROCKET PART -->
-        <div>
-            <input id="ShowDonateProgress" type="submit" value="HELP" />
-            <form id="Donate" action="">
-                Add sum: <input type="text" name="Amount" value="5"><br> Phone:
-                <input type="radio" name="MTS" value="MTS"> MTS
-                <input type="radio" name="A1" value="A1"> A1
-                <input type="radio" name="Life:)" value="Life:)"> Life:)<br>
-                <input type="text" name="Amount" value="+375">
-                <input type="submit" value="Donate">
-            </form>
-        </div>
-
         <!-- ROCKET DOG -->
         <div class="rocketdog">
         </div>
@@ -77,34 +65,47 @@
             <div class="yellow_box"></div>
             <p><span>support animals</span><br> with your monthly gift<br> to our lifesaving work!</p>
         </div>
-
+        <div>
+            <input id="ShowDonateProgress" type="submit" value="HELP" />
+            <form id="Donate" action="">
+                Add sum: <input type="text" name="Amount" value="5"><br> Phone:
+                <input type="radio" name="MTS" value="MTS"> MTS
+                <input type="radio" name="A1" value="A1"> A1
+                <input type="radio" name="Life:)" value="Life:)"> Life:)<br>
+                <input type="text" name="Amount" value="+375">
+                <input type="submit" value="Donate">
+            </form>
+        </div>
         <div class="moon"></div>
+        <!-- SOCIAL BUTTON -->
+        <div class="sb">
+            <span class="share">Share</span>
+            <i class="line"></i>
+            <a href="https://twitter.com/">Twitter</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://mail.google.com/">Mail</a>
+        </div>
+        <main>
+            <div class="team_bar">
+                <h2>Our team</h2>
+            </div>
+
+            <div class="team">
+                <div class="slide-container">
+                </div>
+                <div id="video-bg">
+                    <video width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto" poster="video/space.jpg">
+                        <source src="video/space.mp4" type="video/mp4"></source>
+                        <source src="video/space.webm" type="video/webm"></source>
+                    </video>
+                </div>
+            </div>
+        </main>
+
     </div>
 
-    <!-- SOCIAL BUTTON -->
-    <div class="sb">
-        <span class="share">Share</span>
-        <i class="line"></i>
-        <a href="https://twitter.com/">Twitter</a>
-        <a href="https://www.facebook.com/">Facebook</a>
-        <a href="https://mail.google.com/">Mail</a>
-    </div>
-    <main>
-        <div class="team_bar">
-            <h2>Our team</h2>
-        </div>
-
-        <div class="team">
-            <div class="slide-container">
-            </div>
-            <div class="video">
-                <video autoplay loop muted poster="video/back.jpg" class="back_video">
-                    <source src="video/space.mp4" type="video/mp4">
-                    <!--нужны и другие форматы этого же видео для кроссбраузерности-->
-                </video>
-            </div>
-        </div>
-    </main>
+    <footer>
+    </footer>
 
 
 
