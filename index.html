@@ -25,14 +25,13 @@
 
 
 <body>
+    <!-- LOADING_LOGO -->
+    <div id="before-load">
+        <span></span>
+    </div>
     <div class="wrapper">
-        <!-- LOADING_LOGO -->
-        <div id="before-load">
-            <span></span>
-        </div>
-
-
         <header>
+
             <div class="logo_plate"></div>
             <div class="logo">
                 <div class="pic">
@@ -45,7 +44,13 @@
             </div>
         </header>
         <div class="moon"></div>
-
+        <div id="video-bg">
+            <video width="100%" height="auto" autoplay loop muted poster="video/space.jpg">
+                            <source src="video/space.mp4" type="video/mp4">
+                            <source src="video/space.ogv" type="video/ogg">
+                            <source src="video/space.webm" type="video/webm">
+                        </video>
+        </div>
         <!-- ROCKET -->
         <div class="rocketdog">
         </div>
@@ -56,8 +61,14 @@
         <!-- BLOCK HERO -->
         <div class="block_hero">
             <h2>Become a hero!</h2>
-            <div class="yellow_box"></div>
-            <p><span>support animals</span><br> with your monthly gift<br> to our lifesaving work!</p>
+
+            <div class="bla-bla-bla">
+                <div>
+                    <p><span>support animals</span>
+                        <br> with your monthly gift<br> to our lifesaving work!</p>
+                </div>
+                <div class="yellow_box"></div>
+            </div>
         </div>
 
         <input id="ShowDonateProgress" type="submit" value="HELP" />
@@ -71,10 +82,9 @@
         </form>
 
         <!-- NAVIGATION -->
-        <nav>
-            <div class="menu_bar">
-            </div>
-        </nav>
+        <div class="menu_bar">
+        </div>
+
 
         <!-- SOCIAL BUTTON -->
         <div class="sb">
@@ -93,13 +103,7 @@
             <div class="team">
                 <div class="slide-container">
                 </div>
-                <div id="video-bg">
-                    <video width="100%" height="auto" autoplay loop muted poster="video/space.jpg">
-                        <source src="video/space.mp4" type="video/mp4">
-                        <source src="video/space.ogv" type="video/ogg">
-                        <source src="video/space.webm" type="video/webm">
-                    </video>
-                </div>
+
             </div>
         </main>
 

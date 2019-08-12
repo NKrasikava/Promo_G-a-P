@@ -21,13 +21,6 @@
       background-color: #000003;
   }
   /*PArt_1_HELP*/
-  /*back decoration*/
-  /* .wrapper {
-      background: url(../img/back_1.jpg);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-  } */
   
   .moon {
       background: url(../img/moon.png) no-repeat bottom right;
@@ -81,19 +74,23 @@
   #loader {
       margin-left: 30%;
   }
-  /*text plate_Become a Hero*/
+  /*TEXT PLATE_HERO*/
+  
+  .block_hero {
+      width: 30%;
+  }
   
   .block_hero h2 {
       margin: auto;
       color: #f1a23e;
       font-size: 50px;
-      padding-left: 30%;
       line-height: 90px;
       font-weight: 600;
       text-transform: uppercase;
       text-decoration: underline;
       z-index: 3;
       position: relative;
+      align-content: center;
   }
   
   .block_hero p span {
@@ -139,7 +136,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 4;
+      z-index: 8;
   }
   /*Rocket part*/
   
@@ -164,7 +161,6 @@
   
   #video-bg {
       position: fixed;
-      /* position: absolute; */
       top: 0;
       right: 0;
       bottom: 0;
@@ -183,24 +179,6 @@
       min-height: 100%;
       width: auto;
       height: auto;
-  }
-  /* Проверка на поддержку свойства object-fit: */
-  
-  @supports (object-fit: cover) {
-      #video-bg>video {
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
-  }
-  /* Отключение видео для устройств с размером экрана менее 800px: */
-  
-  @media screen and (max-device-width: 800px) {
-      #video-bg>video {
-          display: none;
-      }
   }
   
   .team {
