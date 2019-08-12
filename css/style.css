@@ -151,10 +151,13 @@
   .rocketdog {
       background: url(../img/rocket.png) no-repeat bottom;
       right: 0;
-      width: 700px;
-      height: 90%;
+      width: 370px;
+      /* width: 30%; */
+      height: 100%;
       position: absolute;
       z-index: 3;
+      bottom: 10%;
+      right: 10%;
   }
   /*Part_2_TEAM*/
   /* Стили для видеофона */
