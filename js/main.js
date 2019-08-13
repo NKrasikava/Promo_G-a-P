@@ -7,6 +7,26 @@ var DonateProgress_value = 0;
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
     $('#before-load').find('span').fadeOut().end().delay(500).fadeOut('slow');
+
+    /*Вешаем обработчик события на кнопку с идентификатором mute*/
+    document.getElementById("tune").onclick = function() {
+        var myaudio = document.getElementById("myaudio");
+        if (myaudio.paused == true) {
+            document.getElementById("myaudio").play();
+            this.style.backgroundColor = "white"; //Цвет кнопки можно изменить напрямую, без всяких картинок.
+            this.style.color = "#3FBAD8"; //Заодно меняем цвет текста для удобичитаемости
+            //this здесь является самой кнопкой, так как функция является дочерней кнопке
+        } else if (myaudio.paused == false) {
+            document.getElementById("myaudio").pause();
+            this.style.backgroundColor = "#3FBAD8";
+            this.style.color = "white";
+        }
+    }
+
+
+
+
+
     //SLIDER
     var mySlides = [{
         src: {
@@ -121,8 +141,9 @@ function writeText(text) {
     canvas.fill();
 
     // пишем новое значение
+    canvas.font = "36px Arial";
     canvas.fillStyle = "white";
-    canvas.fillText(text, 250, 260);
+    canvas.fillText(text, 210, 263);
 }
 
 function drawProgress(go, end) {
