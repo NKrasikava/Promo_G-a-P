@@ -7,8 +7,6 @@ var DonateProgress_value = 0;
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
     $('#before-load').find('span').fadeOut().end().delay(500).fadeOut('slow');
-
-
     //SLIDER
     var mySlides = [{
         src: {

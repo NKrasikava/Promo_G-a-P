@@ -6,9 +6,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: url('../loading_animate/logo.gif') no-repeat center;
+    background: url('../loading_animate/logo.gif') no-repeat;
     z-index: 20;
-    background-color: white;
 }
 
 
@@ -52,10 +51,11 @@ body {
 
 .logo_plate {
     background: url(../img/logo_plate.png) no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 30%;
     position: absolute;
-    z-index: 2;
+    top: 0;
+    z-index: 3;
 }
 
 .logo_text {
@@ -130,129 +130,28 @@ body {
 
 /*Menu_navigation*/
 
+nav {
+    width: 150px;
+    z-index: 4;
+    width: 920px;
+}
+
 .menu_bar {
     background-color: black;
     width: 150px;
     height: 100%;
     position: absolute;
-}
-
-
-/*BUTTONS*/
-
-#mute,
-#main,
-#ShowDonateProgress,
-.sb {
-    border-radius: 50px;
-    height: 70px;
-    color: #fff;
-    width: 70px;
-    text-align: center;
-    position: absolute;
-    background-color: #3FBAD8;
-    left: 76%;
-}
-
-#mute {
-    top: 27%;
-}
-
-#main {
-    top: 36%;
-}
-
-#ShowDonateProgress {
-    top: 45%;
-}
-
-#Donate {
-    display: none;
-}
-
-
-/*SHARE_button*/
-
-.sb {
-    top: 54%;
-}
-
-.line {
-    position: absolute;
-    width: 2px;
-    height: 290px;
-    background: #fff;
-    left: 35px;
-    top: 78px;
-}
-
-.share,
-a {
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    border-radius: 50px;
-    margin: 5px auto;
-    cursor: pointer;
-    position: relative;
-    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAgCAYAAACVf3P1AAAFMklEQVR4Xu2bR5bTQBCGmRMQLoCBA5AOgAlr8ho8MFvSgyXBhCXhAVvCG9bkNcEcgHQAwHMBmBtAfUP3vLJGcpdkaTxqqd+rZ1nu6lD1d1V1dXtmXVuKSmCzMPaEOu4zrZ2Zoo03ha8VUDFNnxC2eQNrK9+AkLIEZFndvunX8jArtJjR11/3PhZlYPG+CG1sAWiQQAEAXhWe60IAy6/yrjyfU2315fmT+z4I9BEbAG/LfC8aRR/LojNOdx2e4YLQDsfwSz7fODwlDdQeMJQU0GN5eUroqfvUHSfdzkn58ZlhZLEB8J3Meb9h3lSpEwDRr0WfaVPfLi+fCO3KkMsfeX/eGS2A1xP6KTSnBaQBtkV+HKY0dkXe3XDvaXSrUJbr9eyxAfC3TCzN/SIvVruWR98I1GlX87q3GhU93g3y5bPDgnUeyAiMLWoA/nCNvJfPA2NaArkwUywDjg2Afj5JEWUtWqtSplnvsnR+0w3gmjIyljE9kkqnLRVdHRYq4RzAXXYRHXnGX1NCANQdYhFvBTpvCgDr5G6TKkuC6JVUIBQLeTdAhCcsUr4K0z4vNIJGXlCwcNvGtHhIfmODQrkjdMk9Z1mG0ODqprisedZtHlov2gL69z5uGxcXdqXyx5CCU35fAh8A10LTgh3nTnSnZ6WRhy0AlyRQZwBqo5LEC56xL5QGxDPy/kFOAJLC2u15tNCey8tjKZYt2b5fLcuBZGAAdXfBxES6oIy0kvaedFZdChZvKS4bU3DNA6HvQqThxgE3q5mREE8DkK30N8XVdZ0kG/KbFTp/a5Bu3QFYNLQYWekGOU27CukRwFV1yQQgHetUDCuilwCZzxNadr9+Ik0FYGgzV7Wi87TPZnJBCCPE5iNkCfO0nayr9w2pcQuD6AsddpxYRdwtx3PEhl0hfwpiGUhTAchinbMIaA3UyXO6M+lw9b4hGDgDxp1CnIxQiqzqpgLQkqKaVJll8ReJ5Yr2vVcYB57ZsnPTO51QiiZtUC0Ai6pqdfmIWTE2VRY86cgpkgWAuFyd6+HML0/mu8oJTaPtGPOAyBFvh2WqMv5bEZZYAOhdL4lDXwDkUaFQpnwaAKm6z1gB6EFIuFWVJcSYjewf0gDISmADQmVWQ8dpNLkyMNnkDYdVa3yNtR8zANHxeiFyn+jfn/mXoQIS2lxeGSkagOxyQb8PEu/Lsz9y80wcIvcdMHlXt1xXGYKMHYAApQo3DKBXZE88AElCkuUmQAzl+LCQ2kyH6peh9LXURswARM76yl1Zcv8gDaXeoQSAHWfJAN9dIcttX1YI1g8T/ULoeFkjrUE7sQMQFbDRnC1JF+wTiCmHae0BQH0VJ8+dNn8mXCQ3WNLcptJMEwCIYPFsfWegJhF0V5gzDy4AoL7ha90VMyB/bNcC8L968shuEoWuNq/eG+TtOxieITS9otn9cq3cUrwFHDnbszDWvE5TLCBq4oSEP6ll/dcjS5W4XTaswf+YJF2w1Zr5/wFskk4y/XvNgZY1/NgByIYUt4n1KpKGGQofhowrW8ECAPWGAobQdWxM8ku3KoImNjiC+lWIDYAHRQVsOPzlk0k00hdm0nfmAwoftwDCe0I91ztXscgBchMGJPM71/ZJwRwRAuXUzXMrZpKJrSXe2ADoZYsxQafdnMIGbPMOPws5eVcEzlg3VgIg47mjGgR0A0d02NQSKwC9PtE7IIRwwRgdnZjGIAE6jwU+C5dYd26FBWJgjB2ABhGUV6UFYH5ZtgDML7NMjhaA+YXZAjC/zDI5/gGaDPuPuMCSywAAAABJRU5ErkJggg==) 0 0 no-repeat;
-    line-height: 100;
-    overflow: hidden;
-}
-
-.share {
-    background: #3FBAD8 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABfUlEQVRYR+2XQYoCMRBFJ268h95DG9w7zgFm5QEUD6CCWxe6F3RmL3oABb2BN9BjuGt/SdJkmk5SrRUEGaEQNN3/paryu1p9RP6kadqGRA+RICqIA2KslDqStIqpD/EF7t91aAwBMYkGoHe+0bt27TOJCbCDaiuQ4X1MgCvEq6ESvx8Aav+NXY8Q9dDu8f9aLAMlhQ3b803oEb5A5YToRDmGAWEymh8SxromvvqIT+07ZECjh42IK8yo/31J1gMFlkkmMjek0sIG8A4QsMwlljQKuppqnKWau+P8OsW0TPs6EeEsAwDgWCatFxW2AXiWiWZ4NM2+66gELwfgluCsm+5XMhOmCbf2kQwIiIKYYziF6MABsdLHsJYDEwGxjYgsk55iiQahrMxyRjTGb6IgpTtbO6IYSGkAUwYuSPSpOABCj+MvR1PLTsUeEN+hen4gyd+9JMj/VBzv1Yz5lJWbigt6gV5KQxYv34Q2CLLgs3jZY+g6a3oqti3+z1R8AxnkwcUTSGj0AAAAAElFTkSuQmCC) 17px center no-repeat;
-}
-
-a:nth-of-type(1) {
-    background-position: -117px center;
-}
-
-a:nth-of-type(2) {
-    background-position: -55px center;
-}
-
-a:nth-of-type(3) {
-    background-position: 12px center;
-}
-
-.line {
-    height: 0;
-}
-
-a {
-    transform: scale(0) translate3d(0, 0, 0);
-    transition: -webkit-transform 0.0001s linear, background 0.0001s ease;
-    width: 50px;
-    height: 50px;
-}
-
-
-/* animation */
-
-.sb:hover .line {
-    height: 170px;
-    transition: height 0.0001s linear;
-    transition-duration: .3s;
-}
-
-.sb:hover a {
-    background-color: #f1a23e;
-    transform: scale(1) translate3d(0, 0, 0);
-    transition-delay: 0.1s, 0.0001s;
-    transition-duration: 0.3s, 0.4s;
-}
-
-.sb:hover a:nth-of-type(2) {
-    transition-delay: 0.2s, 0.0001s;
-}
-
-.sb:hover a:nth-of-type(3) {
-    transition-delay: 0.3s, 0.001s;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 
 /*Rocket part*/
+
+#Donate {
+    display: none;
+}
 
 .rocketdog {
     background: url(../img/rocket.png) no-repeat bottom;
