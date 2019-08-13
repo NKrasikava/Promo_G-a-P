@@ -1,215 +1,239 @@
-  /*LOADING...*/
-  
-  #before-load {
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background: url('../loading_animate/logo.gif') no-repeat;
-      z-index: 20;
-  }
-  /*SITE*/
-  
-  body {
-      font-family: 'Palanquin Dark', sans-serif;
-      font-size: 24px;
-      width: 100%;
-      height: 100%;
-      margin: auto;
-      color: white;
-      background-color: #000003;
-  }
-  /*PArt_1_HELP*/
-  
-  .moon {
-      background: url(../img/moon.png) no-repeat bottom right;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 2;
-  }
-  /*Logo part*/
-  
-  .logo {
-      position: absolute;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding-left: 75px;
-      padding-top: 25px;
-      z-index: 3;
-  }
-  
-  .logo_plate {
-      background: url(../img/logo_plate.png) no-repeat;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 2;
-  }
-  
-  .logo_text {
-      padding-left: 40px;
-  }
-  
-  .logo_text h2 {
-      margin: auto;
-      font-size: 50px;
-      line-height: 45px;
-      font-weight: 500;
-  }
-  
-  .logo_text h2 span {
-      text-transform: uppercase;
-  }
-  
-  .logo_text p {
-      margin: auto;
-      color: #44b1dd;
-  }
-  
-  #loader {
-      margin-left: 30%;
-  }
-  /*TEXT PLATE_HERO*/
-  
-  .block_hero {
-      width: 30%;
-  }
-  
-  .block_hero h2 {
-      margin: auto;
-      color: #f1a23e;
-      font-size: 50px;
-      line-height: 90px;
-      font-weight: 600;
-      text-transform: uppercase;
-      text-decoration: underline;
-      z-index: 3;
-      position: relative;
-      align-content: center;
-  }
-  
-  .block_hero p span {
-      color: #f1a23e;
-      font-size: 28px;
-      text-transform: uppercase;
-      z-index: 3;
-      position: absolute;
-  }
-  
-  .block_hero p {
-      display: inline-block;
-      padding-left: 30px;
-      line-height: 38px;
-      font-weight: 500;
-      position: absolute;
-      margin: auto;
-      z-index: 3;
-  }
-  
-  .yellow_box {
-      display: inline-block;
-      width: 110px;
-      height: 100px;
-      background-color: #f1a23e;
-      margin-left: 30%;
-      background-image: url(../img/text_icon.png);
-      position: absolute;
-      z-index: 3;
-  }
-  /*Menu_navigation*/
-  
-  nav {
-      width: 150px;
-      z-index: 4;
-      width: 920px;
-  }
-  
-  .menu_bar {
-      color: rgb(87, 169, 207);
-      width: 150px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 8;
-  }
-  /*Rocket part*/
-  
-  #ShowDonateProgress {
-      z-index: 2;
-  }
-  
-  #Donate {
-      display: none;
-  }
-  
-  .rocketdog {
-      background: url(../img/rocket.png) no-repeat bottom;
-      right: 0;
-      width: 370px;
-      /* width: 30%; */
-      height: 100%;
-      position: absolute;
-      z-index: 3;
-      bottom: 10%;
-      right: 10%;
-  }
-  /*Part_2_TEAM*/
-  /* Стили для видеофона */
-  
-  #video-bg {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: -1;
-      background: url(video/space.jpg) no-repeat;
-      background-size: cover;
-  }
-  
-  #video-bg>video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-  }
-  
-  .team {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      top: 100%;
-      left: 0;
-      position: absolute;
-  }
-  
-  .team_bar {
-      background: url(../img/board_team.png) repeat-x;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      position: absolute;
-  }
-  
-  .team_bar h2 {
-      width: 100%;
-      position: absolute;
-      font-size: 45px;
-      font-weight: 600;
-      text-transform: uppercase;
-      z-index: 3;
-      padding-top: 30px;
-      text-align: center;
-  }
+/*LOADING...*/
+
+#before-load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../loading_animate/logo.gif') no-repeat;
+    z-index: 20;
+}
+
+
+/*SITE*/
+
+body {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: white;
+    background-color: #000003;
+}
+
+
+/*PArt_1_HELP*/
+
+.moon {
+    background: url(../img/moon.png) no-repeat bottom right;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/*Logo part*/
+
+.logo {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 75px;
+    padding-top: 25px;
+    z-index: 3;
+}
+
+.logo_plate {
+    background: url(../img/logo_plate.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.logo_text {
+    padding-left: 40px;
+}
+
+.logo_text h2 {
+    margin: auto;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.logo_text h2 span {
+    text-transform: uppercase;
+}
+
+.logo_text p {
+    margin: auto;
+    color: #44b1dd;
+}
+
+
+/*TEXT PLATE_HERO*/
+
+.block_hero {
+    width: 30%;
+}
+
+.block_hero h2 {
+    margin: auto;
+    color: #f1a23e;
+    font-size: 50px;
+    line-height: 90px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    z-index: 3;
+    position: relative;
+    align-content: center;
+}
+
+.block_hero p span {
+    color: #f1a23e;
+    font-size: 28px;
+    text-transform: uppercase;
+    z-index: 3;
+    position: absolute;
+}
+
+.block_hero p {
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 38px;
+    font-weight: 500;
+    position: absolute;
+    margin: auto;
+    z-index: 3;
+}
+
+.yellow_box {
+    display: inline-block;
+    width: 110px;
+    height: 100px;
+    background-color: #f1a23e;
+    margin-left: 30%;
+    background-image: url(../img/text_icon.png);
+    position: absolute;
+    z-index: 3;
+}
+
+
+/*Menu_navigation*/
+
+nav {
+    width: 150px;
+    z-index: 4;
+    width: 920px;
+}
+
+.menu_bar {
+    color: rgb(87, 169, 207);
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+
+/*Rocket part*/
+
+#ShowDonateProgress {
+    z-index: 11;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    top: 45%;
+    left: 80%;
+    position: absolute;
+}
+
+#Donate {
+    display: none;
+}
+
+.rocketdog {
+    background: url(../img/rocket.png) no-repeat bottom;
+    right: 0;
+    width: 370px;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 10%;
+    right: 10%;
+}
+
+#loader {
+    width: 350px;
+    position: absolute;
+    top: 80px;
+    left: -300px;
+}
+
+
+/*Part_2_TEAM*/
+
+
+/* Стили для видеофона */
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    background: url(video/space.jpg) no-repeat;
+    background-size: cover;
+}
+
+#video-bg>video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.team {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.team_bar {
+    background: url(../img/board_team.png) repeat-x;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+.team_bar h2 {
+    width: 100%;
+    position: absolute;
+    font-size: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 3;
+    padding-top: 30px;
+    text-align: center;
+}
