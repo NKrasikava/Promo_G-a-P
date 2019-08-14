@@ -110,6 +110,8 @@ body {
     width: 25%;
     position: absolute;
     z-index: 7;
+    top: 50%;
+    left: 25%;
 }
 
 .block_hero h2 {
