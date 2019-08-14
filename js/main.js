@@ -24,9 +24,6 @@ $(document).ready(function() { // функции выполняются посл
     }
 
 
-
-
-
     //SLIDER
     var mySlides = [{
         src: {
@@ -79,14 +76,28 @@ $(document).ready(function() { // функции выполняются посл
         type: 'slice'
     });
 
-    $("#ShowDonateProgress").click(ShowDonateForm);
-    $("#Donate").on('submit', ProcessDonate);
 
+    // HELP BUTTON
+    $("#ShowDonateProgress").click(ShowDonateForm);
+    // $("#Donate").on('submit', ProcessDonate);
+    $("#loader").on('click', StartRocket);
 });
+
+function StartRocket() {
+    $("#loader").css("display", "none");
+    $(".rocketdog").animate({
+        bottom: "100%"
+    }, 3000, function() {
+        setTimeout(function() {
+            $(".rocketdog").css("bottom", "10%");
+        }, 2000);
+    });
+}
 
 function ShowDonateForm() {
     DonateProgress_value = 75;
     $("#Donate").css("display", "block");
+    $("#loader").css("display", "block");
     drawEmptyProgress();
     doProgress(0, DonateProgress_value);
 }
@@ -147,13 +158,12 @@ function writeText(text) {
 }
 
 function drawProgress(go, end) {
-    // console.log("drawProgress ", new Date().getTime());
     // пересчитаем проценты в градусы
     var goDegree = (360 / 100) * go - 90;
     var endDegree = (360 / 100) * (end) - 90;
 
     // дорисовываем проценты от значения go до значения end
-    canvas.strokeStyle = 'red';
+    canvas.strokeStyle = '#df2020';
     canvas.beginPath();
     canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
     canvas.stroke();
