@@ -59,7 +59,7 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/girl_2.png"
         },
         title: 'Ingrid Lewis',
-        desc: 'I’ve basically been an animal lover since I was born, and for my entire childhood I planned on becoming a veterinarian. ',
+        desc: 'I’ve basically been an animal lover since I was born. So now I am here and try to do my best! ',
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Ingrid',
