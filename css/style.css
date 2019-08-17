@@ -8,6 +8,7 @@
     bottom: 0;
     background: url('../animate_CC/logo.gif') no-repeat;
     z-index: 20;
+    background-color: white;
 }
 
 
@@ -308,7 +309,7 @@ a {
 /*Team_block style*/
 
 .team {
-    width: 100%;
+    width: 1346px;
     height: 100%;
     overflow: hidden;
     top: 100%;

@@ -31,10 +31,10 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/girl_1.png"
         },
         title: 'Amanda Burrington',
-        desc: 'I’m a volunteer on the G-a-P dog team – walking dogs at the center and participating in the Adventure Buddies program — and I’ve fostered a few litters of kittens in the past. (I definitely want foster again when my travel schedule permits!)',
+        desc: 'I’m a volunteer on the G-a-P dog team – walking dogs at the center and participating in the "Little noses" program. ',
         btnTitle: 'Action Button',
         button: {
-            text: 'about Amanda',
+            text: 'Saved by Amanda',
             url: false, // URL
             class: 'Button Class(es)',
             color: '#3781ce'
@@ -45,10 +45,10 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/guy_1.png"
         },
         title: 'Kurt Lockwood',
-        desc: 'I first started volunteering in 2015, but then ended up moving. I returned to the area at the end of 2017 and have been back in action ever since.',
+        desc: 'I started volunteering in 2015 and since that time have no chance to stop helping homeless dogs. ',
         btnTitle: 'Action Button',
         button: {
-            text: 'About Kurt',
+            text: 'Saved by Kurt',
             url: false, // URL
             class: 'Button Class(es)',
             color: '#3781ce'
@@ -62,7 +62,7 @@ $(document).ready(function() { // функции выполняются посл
         desc: 'I’ve basically been an animal lover since I was born, and for my entire childhood I planned on becoming a veterinarian. ',
         btnTitle: 'Action Button',
         button: {
-            text: 'About Ingrid',
+            text: 'Saved by Ingrid',
             url: false, // URL
             class: 'Button Class(es)',
             color: '#3781ce'
