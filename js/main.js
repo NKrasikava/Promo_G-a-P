@@ -6,7 +6,7 @@ var DonateProgress_value = 0;
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
-    $('#before-load').find('span').fadeOut().end().delay(500).fadeOut('slow');
+    $('#before-load').find('span').fadeOut().end().delay(4100).fadeOut('slow');
 
     /*Вешаем обработчик события на кнопку с идентификатором mute*/
     document.getElementById("tune").onclick = function() {
@@ -72,7 +72,7 @@ $(document).ready(function() { // функции выполняются посл
     $('.slide-container').slideWiz({
         file: mySlides,
         auto: true,
-        speed: 5000,
+        speed: 6000,
         type: 'slice'
     });
 
@@ -84,18 +84,20 @@ $(document).ready(function() { // функции выполняются посл
 });
 
 function StartRocket() {
-    $("#loader").css("display", "none");
-    $(".rocketdog").animate({
-        bottom: "100%"
-    }, 3000, function() {
-        setTimeout(function() {
-            $(".rocketdog").css("bottom", "10%");
-        }, 2000);
-    });
+    if (DonateProgress_value == 100) {
+        $("#loader").css("display", "none");
+        $(".rocketdog").animate({
+            bottom: "100%"
+        }, 3000, function() {
+            setTimeout(function() {
+                $(".rocketdog").css("bottom", "10%");
+            }, 2000);
+        });
+    }
 }
 
 function ShowDonateForm() {
-    DonateProgress_value = 75;
+    DonateProgress_value = 100;
     $("#Donate").css("display", "block");
     $("#loader").css("display", "block");
     drawEmptyProgress();
@@ -182,7 +184,6 @@ function doProgress(go, end) {
         setTimeout(this.drawProgress, sleep, go, next);
         sleep += time_deltay;
         go = next;
-        // console.log("go: ", go, " next: ", next, " sleep: ", sleep);
     }
     if (100 == end) {
         sleep += 5 * time_deltay;

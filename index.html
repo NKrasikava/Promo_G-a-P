@@ -28,7 +28,16 @@
     <div id="before-load">
         <span></span>
     </div>
+
     <div class="wrapper">
+
+        <div id="video-bg">
+            <video width="100%" height="auto" autoplay loop muted poster="video/space.jpg">
+                                <source src="media/space.mp4" type="video/mp4">
+                                <source src="media/space.ogv" type="video/ogg">
+                                <source src="media/space.webm" type="video/webm">
+                            </video>
+        </div>
         <header>
             <div class="logo_plate"></div>
             <div class="logo">
@@ -43,15 +52,6 @@
         </header>
         <section>
             <div class="moon"></div>
-            <div id="video-bg">
-                <video width="100%" height="auto" autoplay loop muted poster="video/space.jpg">
-                            <source src="video/space.mp4" type="video/mp4">
-                            <source src="video/space.ogv" type="video/ogg">
-                            <source src="video/space.webm" type="video/webm">
-                        </video>
-            </div>
-
-
 
             <!-- ROCKET -->
             <div class="rocketdog">
@@ -67,47 +67,47 @@
                         <br> with your monthly gift<br> to our lifesaving work!</p>
                 </div>
             </div>
-    </div>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="menu_bar">
-            <span class="box"></span>
-            <button id="tune" type="button">TUNE</button>
-            <audio id="myaudio" loop>
-                            <source src="video/sound.ogg" type="audio/ogg; codecs=vorbis">
-                            <source src="video/sound.mp3" type="audio/mp3; codecs=vorbis">
+
+            <!-- NAVIGATION -->
+            <nav>
+                <div class="menu_bar">
+                    <span class="box"></span>
+                    <button id="tune" type="button">TUNE</button>
+                    <audio id="myaudio" loop>
+                            <source src="media/sound.ogg" type="audio/ogg; codecs=vorbis">
+                            <source src="media/sound.mp3" type="audio/mp3">
+                            <source src="media/sound.wav" type="audio/wav">
                           </audio>
+                    <input id="main" type="button" onclick="location.href='https://nkrasikava.github.io/Get-a-Pet/'" ; value="MAIN">
+                    <input id="ShowDonateProgress" type="submit" value="HELP">
+                    <!-- SOCIAL BUTTON -->
+                    <div class="sb">
+                        <button class="share" type="button"></button>
+                        <span class="line"></span>
+                        <a href="https://twitter.com/">Twitter </a>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                        <a href="https://www.google.com/">Mail</a>
+                    </div>
+                </div>
+            </nav>
 
-            <input id="main" type="submit" value="MAIN">
-            <input id="ShowDonateProgress" type="submit" value="HELP">
-            <!-- SOCIAL BUTTON -->
-            <div class="sb">
-                <button class="share" type="button"></button>
-                <span class="line"></span>
-                <a href="https://twitter.com/">Twitter </a>
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.google.com/">Mail</a>
-            </div>
-        </div>
-    </nav>
 
-
-    </section>
-    <main>
-        <div class="team_bar">
-            <h2>Our team</h2>
-        </div>
-
-        <div class="team">
-            <div class="slide-container">
+        </section>
+        <main>
+            <div class="team_bar">
+                <h2>Our team</h2>
             </div>
 
-        </div>
-    </main>
+            <div class="team">
+                <div class="slide-container">
+                </div>
+
+            </div>
+        </main>
 
     </div>
-
+    </div>
 </body>
 
 </html>
