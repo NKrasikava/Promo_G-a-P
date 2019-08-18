@@ -1,7 +1,9 @@
 var canvas; // глобальная переменная
 var step = 1;
-var time_deltay = 100;
+var time_delay = 100;
 var DonateProgress_value = 0;
+var IntervalId;
+var doProgress_run = false;
 
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
@@ -78,7 +80,7 @@ $(document).ready(function() { // функции выполняются посл
     });
 
 
-    // HELP BUTTON
+    // Press Help BUTTON
     $("#ShowDonateProgress").click(ShowDonateForm);
     // $("#Donate").on('submit', ProcessDonate);
     $("#loader").on('click', StartRocket);
@@ -92,12 +94,16 @@ function StartRocket() {
         }, 3000, function() {
             setTimeout(function() {
                 $(".rocketdog").css("bottom", "10%");
+                doProgress_run = false;
             }, 2000);
         });
     }
 }
 
 function ShowDonateForm() {
+    if (doProgress_run) {
+        return;
+    }
     DonateProgress_value = 100;
     $("#Donate").css("display", "block");
     $("#loader").css("display", "block");
@@ -176,19 +182,21 @@ function drawProgress(go, end) {
 
 function doProgress(go, end) {
     // в цикле задаем последовательность вызовов фенкции для обновления процентов прогресса
-    var sleep = 0;
-    while (go < end) {
+    doProgress_run = true;
+    IntervalId = setInterval(function() {
+
         if (step > end - go) {
             step = end - go;
         }
         next = go + step;
-        setTimeout(this.drawProgress, sleep, go, next);
-        sleep += time_deltay;
+        drawProgress(go, next);
         go = next;
-    }
-    if (100 == end) {
-        sleep += 5 * time_deltay;
-        setTimeout(this.writeText, sleep, "Start");
 
-    }
+        if (100 == next) {
+            setTimeout(function() {
+                writeText("Start");
+            }, 1000, );
+            clearInterval(IntervalId);
+        }
+    }, 50);
 }
