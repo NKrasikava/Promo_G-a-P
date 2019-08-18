@@ -6,9 +6,9 @@ var DonateProgress_value = 0;
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
-    $('#before-load').find('span').fadeOut().end().delay(4100).fadeOut('slow');
+    $('#before-load').find('span').fadeOut().end().delay(100).fadeOut('slow');
 
-    /*Вешаем обработчик события на кнопку с идентификатором mute*/
+    /*Вешаем обработчик события на кнопку с идентификатором tune*/
     document.getElementById("tune").onclick = function() {
         var myaudio = document.getElementById("myaudio");
         if (myaudio.paused == true) {
@@ -35,7 +35,7 @@ $(document).ready(function() { // функции выполняются посл
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Amanda',
-            url: false, // URL
+            url: 'https://unsplash.com/search/photos/dog',
             class: 'Button Class(es)',
             color: '#3781ce'
         }
@@ -49,7 +49,7 @@ $(document).ready(function() { // функции выполняются посл
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Kurt',
-            url: false, // URL
+            url: 'https://unsplash.com/search/photos/canine',
             class: 'Button Class(es)',
             color: '#3781ce'
         }
@@ -63,7 +63,7 @@ $(document).ready(function() { // функции выполняются посл
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Ingrid',
-            url: false, // URL
+            url: 'https://unsplash.com/search/photos/pet',
             class: 'Button Class(es)',
             color: '#3781ce'
         }
