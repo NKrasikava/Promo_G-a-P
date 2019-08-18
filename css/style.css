@@ -186,7 +186,7 @@ body {
 #tune,
 #main,
 #ShowDonateProgress {
-    margin-left: 15px;
+    margin-left: 55px;
     border-radius: 50%;
     margin-right: 15px;
     width: 120px;
@@ -197,7 +197,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    border: 2px dashed #44b1dd;
+    border: 2px dashed white;
     background-clip: content-box;
     padding: 10px;
     transition: .5s;
@@ -207,6 +207,7 @@ body {
 .social .link:hover {
     font-size: 24px;
     transform: rotate(360deg);
+    background-color: #44b1dd;
 }
 
 
@@ -242,3 +243,45 @@ body {
     padding-top: 30px;
     text-align: center;
 }
+
+
+/*FOOTER*/
+
+
+/* #red {
+    background: url(../img/board_team.png) no-repeat;
+    border-width: 15px;
+    position: absolute;
+    top: 200%;
+    height: 100%;
+    width: 1346px;
+}
+
+.text {
+    color: #424242;
+    font-family: Lato;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text2 {
+    color: #424242;
+    font-family: Lato;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.text3 {
+    color: #424242;
+    font-family: Lato;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -20px;
+    float: center;
+}
+
+#page-footer {
+    display: none !important;
+} */
