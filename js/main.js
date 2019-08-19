@@ -82,13 +82,15 @@ $(document).ready(function() { // функции выполняются посл
 
     // Press Help BUTTON
     $("#ShowDonateProgress").click(ShowDonateForm);
-    // $("#Donate").on('submit', ProcessDonate);
+    $("#DonateForm").on('submit', ProcessDonate);
     $("#loader").on('click', StartRocket);
 });
 
 function StartRocket() {
     if (DonateProgress_value == 100) {
         $("#loader").css("display", "none");
+        $("#DonateForm").css("display", "none");
+
         $(".rocketdog").animate({
             bottom: "100%"
         }, 3000, function() {
@@ -104,29 +106,29 @@ function ShowDonateForm() {
     if (doProgress_run) {
         return;
     }
-    DonateProgress_value = 100;
-    $("#Donate").css("display", "block");
+
+    DonateProgress_value = 75;
+    $("#DonateForm").css("display", "block");
     $("#loader").css("display", "block");
+
     drawEmptyProgress();
     doProgress(0, DonateProgress_value);
 }
 
 function ProcessDonate(event) {
+    if (doProgress_run) {
+        return;
+    }
+
     event.preventDefault(); //  чтобы не перерисовывать страницу
 
-    console.log("Amount: ", $("input[name=Amount]").val());
     var donate_val = $("input[name=Amount]").val();
 
     if (donate_val > 0) {
         Next_val = DonateProgress_value + parseInt(donate_val);
-        console.log("donate_val: ", donate_val);
-        console.log("Next_val: ", Next_val);
         if (Next_val > 100) {
             Next_val = 100;
         }
-        console.log("Next_val 2: ", Next_val);
-
-        console.log("doProgress(", DonateProgress_value, ",", Next_val, ")");
         doProgress(DonateProgress_value, Next_val);
         DonateProgress_value = Next_val;
     }
@@ -149,11 +151,11 @@ function drawEmptyProgress() {
     canvas.arc(250, 250, 70, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.stroke();
 
-    writeText("0%")
+    writeTextProgress("0%")
 }
 
 //ПРОГРАММИРУЕМ РАБОТУ КНОПКИ ПРОГРЕССА
-function writeText(text) {
+function writeTextProgress(text) {
     // затираем старое значение процентов
     canvas.fillStyle = "black"; //большой круг
     canvas.beginPath();
@@ -177,7 +179,7 @@ function drawProgress(go, end) {
     canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
     canvas.stroke();
 
-    writeText(end.toString() + "%")
+    writeTextProgress(end.toString() + "%")
 }
 
 function doProgress(go, end) {
@@ -192,11 +194,17 @@ function doProgress(go, end) {
         drawProgress(go, next);
         go = next;
 
-        if (100 == next) {
-            setTimeout(function() {
-                writeText("Start");
-            }, 1000, );
+        if (100 == next || go == end) {
+
+            if (100 == next) {
+                setTimeout(function() {
+                    writeTextProgress("Start");
+                }, 1000, );
+            }
+
             clearInterval(IntervalId);
+            doProgress_run = false;
         }
+
     }, 50);
 }

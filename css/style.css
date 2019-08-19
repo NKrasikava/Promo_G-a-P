@@ -162,8 +162,9 @@ body {
 
 /*Menu_navigation*/
 
-#Donate {
+#DonateForm {
     display: none;
+    left: 62%;
 }
 
 #loader {
