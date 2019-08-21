@@ -149,14 +149,41 @@ body {
 
 /*Rocket*/
 
-.rocketdog {
-    background: url(../img/rocket.png) no-repeat bottom;
+#rocketdog {
     width: 370px;
     height: 100%;
-    position: absolute;
-    z-index: 3;
-    bottom: 10%;
+    position: relative;
+    z-index: 0;
+    bottom: -24vh;
     left: 62%;
+}
+
+#rocket {
+    width: 100%;
+    height: auto;
+    top: 20%;
+    right: 0;
+    z-index: 7;
+}
+
+#flame {
+    width: 50%;
+    height: auto;
+    z-index: 4;
+    margin-top: -15%;
+    padding-left: 27%;
+    position: absolute;
+}
+
+#smoke {
+    display: block;
+    width: 35%;
+    height: auto;
+    z-index: 5;
+    position: absolute;
+    padding-left: 36%;
+    overflow: hidden;
+    bottom: 0;
 }
 
 
@@ -186,7 +213,7 @@ body {
 
 #tune,
 #main,
-#ShowDonateProgress {
+#help {
     margin-left: 55px;
     border-radius: 50%;
     margin-right: 15px;

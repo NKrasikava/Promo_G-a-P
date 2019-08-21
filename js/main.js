@@ -81,24 +81,34 @@ $(document).ready(function() { // функции выполняются посл
 
 
     // Press Help BUTTON
-    $("#ShowDonateProgress").click(ShowDonateForm);
+    $("#help").click(ShowDonateForm);
     $("#DonateForm").on('submit', ProcessDonate);
     $("#loader").on('click', StartRocket);
 });
 
+// Launch the rocket
 function StartRocket() {
     if (DonateProgress_value == 100) {
         $("#loader").css("display", "none");
         $("#DonateForm").css("display", "none");
-
-        $(".rocketdog").animate({
-            bottom: "100%"
+        var defaultBottom = $("#rocketdog").css("bottom");
+        $("#rocketdog").animate({
+            bottom: "100vh"
         }, 3000, function() {
             setTimeout(function() {
-                $(".rocketdog").css("bottom", "10%");
+                $("#rocketdog").css("bottom", defaultBottom);
+                // return hidden smoke (see the comment below)
+                $("#smoke").css("display", "block");
                 doProgress_run = false;
             }, 2000);
         });
+
+        // hide smoke after 1 second after rocket start
+        setTimeout(function() {
+            $("#smoke").css("display", "none");
+            doProgress_run = false;
+        }, 1000);
+
     }
 }
 
