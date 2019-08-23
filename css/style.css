@@ -39,7 +39,7 @@ body {
     position: fixed;
     overflow: hidden;
     z-index: -1;
-    background: url(video/space.jpg) no-repeat;
+    background: url(../media/space.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -197,10 +197,9 @@ body {
 #loader {
     width: 350px;
     position: absolute;
-    top: 80px;
-    left: -300px;
-    z-index: 21;
-    display: block;
+    top: -30%;
+    left: -80%;
+    z-index: 5;
 }
 
 .menu {
@@ -236,7 +235,6 @@ body {
 .menu .link:hover {
     font-size: 24px;
     transform: rotate(360deg);
-    background-color: #44b1dd;
 }
 
 
@@ -297,6 +295,9 @@ body {
 }
 
 
+/*GALLERY*/
+
+
 /*FOOTER*/
 
 .footer-wrap {
@@ -307,7 +308,7 @@ body {
     position: absolute;
     bottom: -200%;
     width: 1346px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
 }
 
 .footer-wrap h2 {
@@ -318,6 +319,37 @@ body {
 
 .footer-wrap p {
     color: #44b1dd;
+}
+
+
+/*SHINING*/
+
+#trigger {
+    height: 150px;
+    position: absolute;
+    bottom: -170%;
+    width: 150px;
+    border-radius: 50%;
+    left: 55%;
+    animation: glowness 10s linear infinite;
+}
+
+
+/*shining animation*/
+
+@keyframes glowness {
+    0% {
+        box-shadow: 0 0 30px white;
+    }
+    33% {
+        box-shadow: 0 0 30px #44b1dd;
+    }
+    66% {
+        box-shadow: 0 0 30px rgb(201, 130, 248);
+    }
+    100% {
+        box-shadow: 0 0 30px rgb(123, 253, 71);
+    }
 }
 
 
