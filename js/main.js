@@ -17,15 +17,16 @@ $(document).ready(function() { // функции выполняются посл
             document.getElementById("myaudio").play();
             this.style.backgroundColor = "#3FBAD8";
             this.style.color = "white";
+            $('#icon-sound').removeClass('fa fa-volume-off fa-3x').addClass('fa fa-volume-up fa-3x');
 
             //this здесь является самой кнопкой, так как функция является дочерней кнопке
         } else if (myaudio.paused == false) {
             document.getElementById("myaudio").pause();
             this.style.backgroundColor = "white"; //Цвет кнопки можно изменить напрямую, без всяких картинок.
-            this.style.color = "#3FBAD8"; //Заодно меняем цвет текста для удобичитаемости
+            this.style.color = "black"; //Заодно меняем цвет текста для читабельности
+            $('#icon-sound').removeClass('fa fa-volume-up fa-3x').addClass('fa fa-volume-off fa-3x');
         }
     }
-
 
     //SLIDER
     var mySlides = [{

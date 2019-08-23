@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="css/slideWiz.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
@@ -54,6 +55,7 @@
 
         <!-- ROCKET -->
         <div id="rocketdog"> <img id="rocket" src="img/rocket.png" title="rocket" alt="rocket.png">
+
             <!-- PROGRESS LOADER -->
             <canvas id="loader" width="400" height="400"></canvas>
             <img id="flame" src="animate_CC/flame.gif" title="flame" alt="flame.gif">
@@ -84,36 +86,48 @@
 
         <!-- NAVIGATION -->
         <nav>
-            <div class="social">
-                <button id="tune" class="link">TUNE</button>
+            <div class="menu">
+                <button id="tune" class="link"><span id="icon-sound" class="fa fa-volume-off fa-3x" aria-hidden="true"></span><p>TUNE</p></button>
                 <audio id="myaudio" loop>
                             <source src="media/sound.ogg" type="audio/ogg; codecs=vorbis">
                             <source src="media/sound.mp3" type="audio/mp3">
                             <source src="media/sound.wav" type="audio/wav">
                           </audio>
-                <button id="main" class="link" onclick="location.href='https://nkrasikava.github.io/Get-a-Pet/'">MAIN</button>
-                <button id="help" class="link" type="submit">HELP</button>
+
+                <button id="main" class="link" onclick="location.href='https://nkrasikava.github.io/Get-a-Pet/'"><i class="fa fa-paw fa-2x" aria-hidden="true"></i><p>MAIN</p></button>
+                <button id="help" class="link" type="submit"><img src="img/help_icon.png" title="help_icon" alt="help_icon.png"><p>HELP</p></button>
+
             </div>
         </nav>
         <main>
             <div class="team_bar">
                 <h2>Our team</h2>
             </div>
-
             <div class="team">
                 <div class="slide-container">
                 </div>
-
             </div>
         </main>
+    </div>
+    </div>
 
+    <!-- GALLERY -->
+    <div id="last_part">
+        <h2 class="text">Lucky in august</h2>
     </div>
-    </div>
-    <!-- <footer id="red">
-        <h1 class="text">DMC</h1>
-        <h2 class="text2">&copy; DIMENSIONMC - DESIGNED BY DEN & FLASH</h2>
-        <h2 class="text3">-POWERED BY ENJIN-</h2>
-    </footer> -->
+    <footer>
+        <div class="footer-wrap">
+            <h2>Get Social!</h2>
+            <p>share to help more people join us</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/" title="Facebook" target="_blank"><span class="fa fa-facebook"></span></a>
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank"><span class="fa fa-instagram"></span></a>
+                <a href="https://twitter.com/" title="Twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+                <a href="https://www.skype.com/" title="Skype" target="_blank"><span class="fa fa-skype"></span></a>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
