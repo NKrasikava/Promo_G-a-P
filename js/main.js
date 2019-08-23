@@ -1,4 +1,4 @@
-var canvas; // глобальная переменная
+﻿var canvas; // глобальная переменная
 var step = 1;
 var time_delay = 100;
 var DonateProgress_value = 0;
@@ -99,7 +99,8 @@ function StartRocket() {
             setTimeout(function() {
                 $("#rocketdog").css("bottom", defaultBottom);
                 // return hidden smoke (see the comment below)
-                $("#smoke").css("display", "block");
+                $("#smoke").css("display", "none");
+                $("#flame").css("display", "none");
                 doProgress_run = false;
             }, 2000);
         });
@@ -121,6 +122,8 @@ function ShowDonateForm() {
     DonateProgress_value = 75;
     $("#DonateForm").css("display", "block");
     $("#loader").css("display", "block");
+    $("#smoke").css("display", "block");
+    $("#flame").css("display", "block");
 
     drawEmptyProgress();
     doProgress(0, DonateProgress_value);

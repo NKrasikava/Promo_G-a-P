@@ -167,6 +167,7 @@ body {
 }
 
 #flame {
+    display: none;
     width: 50%;
     height: auto;
     z-index: 4;
@@ -176,7 +177,7 @@ body {
 }
 
 #smoke {
-    display: block;
+    display: none;
     width: 35%;
     height: auto;
     z-index: 5;
