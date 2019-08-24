@@ -172,11 +172,11 @@ body {
 
 #flame {
     display: none;
-    width: 75%;
+    width: 80%;
     height: auto;
     z-index: -2;
-    margin-top: -15%;
-    padding-left: 27%;
+    margin-top: -30%;
+    padding-left: 22%;
     position: absolute;
 }
 
@@ -312,18 +312,6 @@ body {
 
 /*GALLERY*/
 
-aside {
-    height: auto;
-    float: left;
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-}
-
-aside h1 {
-    padding-left: 50px;
-}
-
 .polaroid img {
     width: 170px;
     height: 170px;
@@ -376,6 +364,16 @@ aside h1 {
     transition: all 0.35s;
 }
 
+#dog {
+    background: url(../img/dog.png) no-repeat;
+    position: absolute;
+    float: left;
+    bottom: 0;
+    z-index: 7;
+    width: 30%;
+    height: 212px;
+}
+
 
 /*FOOTER*/
 
@@ -404,13 +402,13 @@ aside h1 {
 
 /*SHINING*/
 
-#trigger {
-    bottom: -200%;
-    height: 15vh;
-    min-height: 170px;
+.footer-wrap #shine {
+    bottom: 0;
+    height: 170px;
     position: absolute;
     width: 1300px;
-    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
     animation: glowness 10s linear infinite;
     margin-left: 20px;
 }
