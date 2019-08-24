@@ -312,6 +312,29 @@ body {
 
 /*GALLERY*/
 
+.article {
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 55px;
+    text-align: left;
+    padding-top: 30px;
+}
+
+.article p {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.article h2 {
+    font-size: 30px;
+    color: #44b1dd;
+    font-weight: 600;
+}
+
 .polaroid img {
     width: 170px;
     height: 170px;
@@ -319,9 +342,8 @@ body {
 }
 
 .gallery {
-    width: 80%;
-    padding-left: 15%;
-    padding-left: 15%;
+    width: 100%;
+    padding-left: 4%;
     text-align: center;
     padding-top: 200px;
     float: right;
