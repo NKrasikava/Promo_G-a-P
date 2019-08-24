@@ -402,7 +402,7 @@ body {
 
 /*SHINING*/
 
-.footer-wrap #shine {
+#shine {
     bottom: 0;
     height: 170px;
     position: absolute;
@@ -411,6 +411,7 @@ body {
     border-top-right-radius: 50%;
     animation: glowness 10s linear infinite;
     margin-left: 20px;
+    z-index: -1;
 }
 
 
