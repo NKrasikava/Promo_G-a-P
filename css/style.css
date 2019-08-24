@@ -313,11 +313,15 @@ body {
 /*GALLERY*/
 
 aside {
-    width: 20%;
     height: auto;
     float: left;
     position: absolute;
-    padding-top: 250px;
+    bottom: 0;
+    z-index: 0;
+}
+
+aside h1 {
+    padding-left: 50px;
 }
 
 .polaroid img {
@@ -378,8 +382,7 @@ aside {
 .footer-wrap {
     display: block;
     text-align: center;
-    height: 15vh;
-    min-height: 170px;
+    height: 170px;
     position: absolute;
     bottom: -200%;
     width: 1346px;
