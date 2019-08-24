@@ -387,6 +387,7 @@ body {
     background-color: black;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+    z-index: 5;
 }
 
 .footer-wrap h2 {
@@ -403,7 +404,7 @@ body {
 /*SHINING*/
 
 #shine {
-    bottom: 0;
+    bottom: -200%;
     height: 170px;
     position: absolute;
     width: 1300px;
@@ -411,7 +412,7 @@ body {
     border-top-right-radius: 50%;
     animation: glowness 10s linear infinite;
     margin-left: 20px;
-    z-index: -1;
+    z-index: 0;
 }
 
 
