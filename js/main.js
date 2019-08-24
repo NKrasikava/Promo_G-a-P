@@ -5,6 +5,11 @@ var DonateProgress_value = 0;
 var IntervalId;
 var doProgress_run = false;
 
+var circle_x;
+var circle_y;
+var black_radius;
+var text_area_radius;
+
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
@@ -82,7 +87,7 @@ $(document).ready(function() { // функции выполняются посл
 
 
     // Press Help BUTTON
-    $("#help").click(ShowDonateForm);
+    $("#help").on('click', ShowDonateForm);
     $("#DonateForm").on('submit', ProcessDonate);
     $("#loader").on('click', StartRocket);
 });
@@ -130,11 +135,11 @@ function ShowDonateForm() {
 }
 
 function ProcessDonate(event) {
+    event.preventDefault(); //  чтобы не перерисовывать страницу
+
     if (doProgress_run) {
         return;
     }
-
-    event.preventDefault(); //  чтобы не перерисовывать страницу
 
     var donate_val = $("input[name=Amount]").val();
 
@@ -155,17 +160,34 @@ function drawEmptyProgress() {
 
     canvas.lineWidth = 12; //толщина линии окружности
     canvas.lineCap = "round"; // скругления окончания линии
+
+    // вычисляем положение сентра и радиусы
+    circle_x = elem.width / 2;
+    circle_y = elem.height / 2;
+
+    // выберем радиус по меньшей из сторон
+    if (elem.width < elem.height) {
+        black_radius = elem.width / 2;
+    } else {
+        black_radius = elem.height / 2;
+    }
+
+    // учтем ширину самой линии
+    black_radius = black_radius - canvas.lineWidth / 2;
+    // и тут учтем ширину самой линии
+    text_area_radius = black_radius - canvas.lineWidth / 2;
+
     canvas.fillStyle = "black"; //большой круг
     canvas.beginPath();
-    canvas.arc(250, 250, 90, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.arc(circle_x, circle_y, black_radius, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.fill();
 
     canvas.strokeStyle = 'white'; //остаток круга
     canvas.beginPath();
-    canvas.arc(250, 250, 70, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.arc(circle_x, circle_y, black_radius, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.stroke();
 
-    writeTextProgress("0%")
+    writeTextProgress("0%");
 }
 
 //ПРОГРАММИРУЕМ РАБОТУ КНОПКИ ПРОГРЕССА
@@ -173,13 +195,13 @@ function writeTextProgress(text) {
     // затираем старое значение процентов
     canvas.fillStyle = "black"; //большой круг
     canvas.beginPath();
-    canvas.arc(250, 250, 60, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
+    canvas.arc(circle_x, circle_y, text_area_radius, 0, 360, false); // координаты центра, радиус, начальный угол и конечный, высчитанные по формуле перевода градусов в радианы (y*PI/180)
     canvas.fill();
 
     // пишем новое значение
     canvas.font = "36px Arial";
     canvas.fillStyle = "white";
-    canvas.fillText(text, 210, 263);
+    canvas.fillText(text, circle_x / 1.5, circle_y);
 }
 
 function drawProgress(go, end) {
@@ -190,7 +212,7 @@ function drawProgress(go, end) {
     // дорисовываем проценты от значения go до значения end
     canvas.strokeStyle = '#df2020';
     canvas.beginPath();
-    canvas.arc(250, 250, 70, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
+    canvas.arc(circle_x, circle_y, black_radius, goDegree * Math.PI / 180, endDegree * Math.PI / 180, false);
     canvas.stroke();
 
     writeTextProgress(end.toString() + "%")
