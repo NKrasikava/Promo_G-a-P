@@ -94,16 +94,16 @@ $(document).ready(function() { // функции выполняются посл
 
     // Draw the map with Minsk location
     var map = new ol.Map({
-    target: 'map',
-    layers: [
-        new ol.layer.Tile({
-        source: new ol.source.OSM()
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([27.56667, 53.9]),
+            zoom: 6
         })
-    ],
-    view: new ol.View({
-        center: ol.proj.fromLonLat([27.56667,53.9]),
-        zoom: 6
-    })
     });
 
 
@@ -149,6 +149,7 @@ function ShowDonateForm() {
 }
 
 function ProcessDonate(event) {
+    console.log("clicked");
     event.preventDefault(); //  чтобы не перерисовывать страницу
 
     if (doProgress_run) {
@@ -175,7 +176,7 @@ function drawEmptyProgress() {
     canvas.lineWidth = 12; //толщина линии окружности
     canvas.lineCap = "round"; // скругления окончания линии
 
-    // вычисляем положение сентра и радиусы
+    // вычисляем положение центра и радиусы
     circle_x = elem.width / 2;
     circle_y = elem.height / 2;
 
@@ -213,9 +214,9 @@ function writeTextProgress(text) {
     canvas.fill();
 
     // пишем новое значение
-    canvas.font = "36px Arial";
+    canvas.font = "30px Arial";
     canvas.fillStyle = "white";
-    canvas.fillText(text, circle_x / 1.5, circle_y);
+    canvas.fillText(text, circle_x / 1.2, circle_y);
 }
 
 function drawProgress(go, end) {

@@ -58,21 +58,13 @@
             <!-- PROGRESS LOADER -->
             <canvas id="loader"></canvas>
             <img id="flame" src="animate_CC/flame/flame.gif" title="flame" alt="flame.gif">
-            <div><img id="smoke" src="animate_CC/smoke.gif"></div>
+            <div><img id="smoke" src="animate_CC/steam/steam.gif"></div>
         </div>
 
 
 
         <!-- BLOCK HERO -->
-        <div class="block_hero">
-            <h2>Become a hero!</h2>
-            <div class="text_box">
-                <div class="yellow_box"></div>
-                <p><span>support animals</span>
-                    <br> with your monthly gift<br> to our lifesaving work!</p>
-            </div>
-
-
+        <div class="hero_all">
             <form id="DonateForm">
                 <div class="donation-box">
 
@@ -83,39 +75,30 @@
                         <input type="text" id="email" placeholder="Email"></input>
                     </div>
                     <div class="amount">
-                        <div class="button">$5</div>
-                        <div class="button">$10</div>
-                        <div class="button">$<input type="text" class="set-amount" placeholder=""> </input>
+                        <div class="button">$<input id="amount_to_doname" type="text" class="set-amount" placeholder=""></input>
                         </div>
+                        <button type="submit" class="donate-button"><i class="fa fa-credit-card"></i> Donate</button>
+                    </div>
+                    <div class="switch">
+                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+                        <label for="one-time" class="switch-label switch-label-off">Once</label>
+                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+                        <label for="monthly" class="switch-label switch-label-on">Monthly</label>
+                        <span class="switch-selection"></span>
+                    </div>
+
+                    <div class="checkboxes">
+                        <input type="checkbox" id="receipt" class="checkbox"></input>
+                        <label for="receipt">Email me a receipt</label>
+                        <br />
+                        <input type="checkbox" id="list" class="checkbox"></input>
+                        <label for="list">Add me to email list</label>
                     </div>
                 </div>
 
-                <div class="switch">
-                    <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
-                    <label for="one-time" class="switch-label switch-label-off">Once</label>
-                    <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
-                    <label for="monthly" class="switch-label switch-label-on">Monthly</label>
-                    <span class="switch-selection"></span>
-                </div>
 
-                <div class="checkboxes">
-                    <input type="checkbox" id="receipt" class="checkbox"></input>
-                    <label for="receipt">Email me a receipt</label>
-                    <br />
-                    <input type="checkbox" id="anon" class="checkbox"></input>
-                    <label for="anon">Give anonymously</label>
-                    <br />
-                    <input type="checkbox" id="list" class="checkbox"></input>
-                    <label for="list">Add me to email list</label>
-                </div>
 
-                <div class="confirm">
-
-                </div>
-
-                <div class="donate-button"><i class="fa fa-credit-card"></i> Donate</div>
-
-                <!-- <form id="DonateForm" action="">
+                <!-- <form id="DonateForm">
                 Add sum: <input type="text" name="Amount" value="5"><br> Phone:
                 <input type="radio" name="provider" value="MTS"> MTS
                 <input type="radio" name="provider" value="A1"> A1
@@ -123,11 +106,17 @@
                 <input type="text" name="Amount" value="+375">
                 <input type="submit" value="Donate">
             </form> -->
-
         </div>
-
+        </form>
+        <div class="block_hero">
+            <h2>Become a hero!</h2>
+            <div class="text_box">
+                <div class="yellow_box"></div>
+                <p><span>support animals</span>
+                    <br> with your monthly gift<br> to our lifesaving work!</p>
+            </div>
+        </div>
     </div>
-    </form>
     </div>
 
 
@@ -164,10 +153,8 @@
                 <section>
                     <div class="article">
                         <h2>IN LOVE WITH DOGS!</h2>
-                        <!-- <p>We believe that every pet deserves a loving home. While loving your dog might seem like a simple concept, there's more to than adoring him and spoiling him with treats and toys. Loving your dog is about building a strong bond
-                                with him and acting in his best interest. A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship. If you take the right steps, you can remain in charge while still having a
-                                friendly relationship with a dog.
-                            </p> -->
+                        <p>We believe that every pet deserves a loving home. <br>A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship.
+                        </p>
                         <div id="map" class="map"></div>
                     </div>
                 </section>

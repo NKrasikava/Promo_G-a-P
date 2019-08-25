@@ -12,7 +12,7 @@
 }
 
 
-/*SITE*/
+/*GENERAL*/
 
 * {
     box-sizing: border-box;
@@ -35,7 +35,7 @@ body {
 }
 
 
-/* Video_back style */
+/* VIDEO-BACK */
 
 #video-bg {
     width: 1346px;
@@ -54,7 +54,7 @@ body {
 }
 
 
-/*PART_1*/
+/*PAGE_1*/
 
 .moon {
     background: url(../img/moon.png) no-repeat bottom;
@@ -113,6 +113,46 @@ body {
 }
 
 
+/*Rocket*/
+
+#rocketdog {
+    width: 370px;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    bottom: -24vh;
+    left: 62%;
+}
+
+#rocket {
+    width: 100%;
+    height: auto;
+    top: 20%;
+    right: 0;
+    z-index: 7;
+}
+
+#flame {
+    display: none;
+    width: 80%;
+    height: auto;
+    z-index: -2;
+    margin-top: -30%;
+    padding-left: 22%;
+    position: absolute;
+}
+
+#smoke {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-left: 15px;
+    top: 90%;
+    z-index: -1;
+}
+
+
 /*Text plate_Hero*/
 
 .block_hero {
@@ -155,57 +195,45 @@ body {
 }
 
 
-/*Rocket*/
-
-#rocketdog {
-    width: 370px;
-    height: 100%;
-    position: relative;
-    z-index: 0;
-    bottom: -24vh;
-    left: 62%;
-}
-
-#rocket {
-    width: 100%;
-    height: auto;
-    top: 20%;
-    right: 0;
-    z-index: 7;
-}
-
-#flame {
-    display: none;
-    width: 80%;
-    height: auto;
-    z-index: -2;
-    margin-top: -30%;
-    padding-left: 22%;
-    position: absolute;
-}
-
-#smoke {
-    display: none;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: -5%;
-}
+/*Form*/
 
 
-/*Menu_navigation*/
-
-.DonateForm {
+/* #DonateForm {
     display: none;
     width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #f1a23e;
+    margin-top: 10px;
+} */
+
+
+/* #DonateForm input {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+} */
+
+.hero_all {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 30%;
+}
+
+#DonateForm {
+    display: none;
+    z-index: 10;
 }
 
 .donation-box {
-    width: 390px;
-    height: 300px;
+    width: 405px;
+    height: 260px;
     background-color: #F5F5F5;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 4px;
+    border-radius: 4px;
     position: relative;
     margin-top: 10px;
 }
@@ -229,13 +257,13 @@ body {
     width: 100%;
     color: black;
     text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
     font-size: 16px;
-    bottom: 0px;
     position: absolute;
     cursor: pointer;
     font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: 200ms background-color;
 }
 
 .donation-box .fields {
@@ -255,11 +283,10 @@ body {
     color: #5C5C5C;
     font-weight: 500;
     margin-bottom: 10px;
-    -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-input-placeholder {
-    color: #cdcdcd;
+input::placeholder {
+    color: #5C5C5C;
     font-size: 15px;
 }
 
@@ -314,11 +341,11 @@ body {
 
 .switch {
     position: absolute;
-    top: 325px;
+    top: 55%;
     left: 15px;
     margin: 20px auto;
     height: 26px;
-    width: 46%;
+    width: 53%;
     background: white;
     border-radius: 3px;
 }
@@ -355,7 +382,7 @@ body {
 .switch-input:checked+.switch-label {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.65);
-    transition: 0.15s ease-out;
+    transition: 0.5s ease-out;
 }
 
 .switch-input:checked+.switch-label-on~.switch-selection {
@@ -378,7 +405,7 @@ body {
 
 .checkboxes {
     position: absolute;
-    top: 375px;
+    top: 75%;
     left: 13px;
 }
 
@@ -436,23 +463,7 @@ body {
 }
 
 
-/* #DonateForm {
-    display: none;
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #f1a23e;
-    margin-top: 10px;
-} */
-
-
-/* #DonateForm input {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-align: center;
-} */
+/*Loader*/
 
 #loader {
     position: absolute;
@@ -460,6 +471,9 @@ body {
     left: -50%;
     z-index: 55;
 }
+
+
+/*Menu pannel*/
 
 .menu {
     position: absolute;
@@ -497,10 +511,10 @@ body {
 }
 
 
-/*PART_2_TEAM*/
+/*PAGE_2*/
 
 
-/*Team_block style*/
+/*Team_block*/
 
 .team {
     width: 1346px;
@@ -531,7 +545,7 @@ body {
 }
 
 
-/*Last page*/
+/*PAGE_3*/
 
 #last_part {
     background: url(../img/board_team.png) no-repeat;
@@ -557,19 +571,19 @@ body {
 /*GALLERY*/
 
 .article {
-    width: 30%;
+    width: 35%;
     height: auto;
     float: left;
     margin-right: 55px;
-    text-align: right;
-    padding-top: 30px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .article p {
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 20px;
     padding-top: 20px;
 }
 
@@ -667,7 +681,7 @@ body {
 }
 
 
-/*SHINING*/
+/*Shining animation*/
 
 #shine {
     bottom: -200%;
@@ -681,21 +695,21 @@ body {
     z-index: 0;
 }
 
-
-/*shining animation*/
-
 @keyframes glowness {
     0% {
-        box-shadow: 0 0 30px white;
+        box-shadow: 0 0 30px #99d8f1;
     }
-    33% {
-        box-shadow: 0 0 30px #44b1dd;
+    25% {
+        box-shadow: 0 0 30px #47c1f1;
     }
-    66% {
-        box-shadow: 0 0 30px rgb(201, 130, 248);
+    50% {
+        box-shadow: 0 0 30px #5b4ecc;
+    }
+    75% {
+        box-shadow: 0 0 30px #a899ff;
     }
     100% {
-        box-shadow: 0 0 30px rgb(123, 253, 71);
+        box-shadow: 0 0 30px #c1b7f7;
     }
 }
 
@@ -725,9 +739,6 @@ body {
     padding-top: 25%;
 }
 
-
-/* hover */
-
 .icons a:hover {
     color: #fff;
     transform: rotate(45deg);
@@ -737,6 +748,8 @@ body {
 }
 
 .map {
-    height: 400px;
-    width: 100%;
-  }
+    margin-top: 20px;
+    height: 250px;
+    width: auto;
+    border: 5px solid #44b1dd;
+}
