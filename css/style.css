@@ -80,8 +80,6 @@ body {
 }
 
 .logo_plate {
-    /* width: 50%;
-    height: 30%; */
     position: absolute;
     top: 0;
     z-index: -1;
@@ -732,4 +730,567 @@ input::placeholder {
     height: 250px;
     width: auto;
     border: 5px solid #44b1dd;
+}
+
+
+/*********************************************** MEDIA ************************************************/
+
+
+/* MEDIA 1366px - 1280px */
+
+@media screen and (max-width: 1366px) {
+    html {
+        width: 1366px;
+    }
+    /*LOADING...*/
+    #before-load {
+        width: 100vh;
+    }
+    /*GENERAL*/
+    body {
+        width: 1366px;
+    }
+    .wrapper {
+        width: 1366px;
+    }
+    /* VIDEO-BACK */
+    #video-bg {
+        width: 1366px;
+    }
+    /*PAGE_1*/
+    .moon {
+        background: url(../img/moon.png) no-repeat bottom;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        z-index: 0;
+    }
+    /*Rocket*/
+    #rocketdog {
+        width: 350px;
+        bottom: -19vh;
+        left: 62%;
+    }
+    #rocket {
+        width: 100%;
+        height: auto;
+        top: 20%;
+        right: 0;
+        z-index: 7;
+    }
+    #flame {
+        display: none;
+        width: 80%;
+        height: auto;
+        z-index: -2;
+        margin-top: -30%;
+        padding-left: 22%;
+        position: absolute;
+    }
+    #smoke {
+        display: none;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        margin-left: 15px;
+        top: 90%;
+        z-index: -1;
+    }
+    /*Text plate_Hero*/
+    .block_hero {
+        width: 450px;
+        position: absolute;
+        z-index: 7;
+        top: 50%;
+        left: 30%;
+    }
+    .block_hero h2 {
+        color: #f1a23e;
+        font-size: 50px;
+        line-height: 70px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    .yellow_box {
+        width: 110px;
+        height: 100px;
+        background-color: #f1a23e;
+        margin-right: 8%;
+        background-image: url(../img/text_icon.png);
+        float: left;
+    }
+    .text_box p span {
+        color: #f1a23e;
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+    .text_box p {
+        padding-left: 30px;
+        line-height: 33px;
+        font-weight: 500;
+        margin: auto;
+    }
+    /*Form*/
+    .hero_all {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 30%;
+    }
+    #DonateForm {
+        display: none;
+        z-index: 10;
+    }
+    .donation-box {
+        width: 405px;
+        height: 260px;
+        background-color: #F5F5F5;
+        border-radius: 4px;
+        border-radius: 4px;
+        position: relative;
+        margin-top: 10px;
+    }
+    .donation-box h4 {
+        background-color: #44b1dd;
+        width: 100%;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color: black;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .donation-box .donate-button {
+        background-color: #44b1dd;
+        width: 100%;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: 200ms background-color;
+    }
+    .donation-box .fields {
+        width: 59%;
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 15px;
+    }
+    .donation-box .fields input {
+        width: 90%;
+        font-size: 17px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        border-width: 0px;
+        color: #5C5C5C;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    input::placeholder {
+        color: #5C5C5C;
+        font-size: 15px;
+    }
+    .donation-box .amount {
+        width: 30%;
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 15px;
+    }
+    .donation-box .amount .button {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 10px;
+        text-align: center;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 200ms background-color;
+    }
+    .donation-box .amount .button:hover {
+        background-color: #44b1dd;
+    }
+    .donation-box .amount .button.selected {
+        background-color: #44b1dd;
+    }
+    .donation-box .amount .button input {
+        width: 50px;
+        font-size: 16px;
+        font-weight: 400;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        border-bottom: 2px dashed white;
+        transition: all 0.15s ease-out;
+    }
+    .set-amount {
+        max-width: 96px;
+    }
+    .switch {
+        position: absolute;
+        top: 55%;
+        left: 15px;
+        margin: 20px auto;
+        height: 26px;
+        width: 53%;
+        background: white;
+        border-radius: 3px;
+    }
+    .switch-label {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 46%;
+        line-height: 26px;
+        font-size: 11px;
+        color: #5C5C5C;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .switch-label:active {
+        font-weight: bold;
+    }
+    .switch-label-off {
+        padding-left: 2px;
+    }
+    .switch-label-on {
+        padding-right: 2px;
+    }
+    .switch-input {
+        display: none;
+    }
+    .switch-input:checked+.switch-label {
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.65);
+        transition: 0.5s ease-out;
+    }
+    .switch-input:checked+.switch-label-on~.switch-selection {
+        left: 114px;
+    }
+    .switch-selection {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 2px;
+        left: 2px;
+        width: 46%;
+        height: 22px;
+        background: #44b1dd;
+        border-radius: 3px;
+        background-color: #44b1dd;
+        transition: left 0.15s ease-out;
+    }
+    .checkboxes {
+        position: absolute;
+        top: 75%;
+        left: 13px;
+    }
+    .checkboxes label {
+        position: relative;
+        top: -8px;
+        font-size: 13px;
+        color: gray;
+    }
+    .checkbox {
+        -webkit-appearance: none;
+        background-color: #fafafa;
+        border: 1px solid #44b1dd;
+        padding: 9px;
+        border-radius: 3px;
+        display: inline-block;
+        position: relative;
+        outline: none;
+        transition: all 0.15s ease-out;
+    }
+    .checkbox:active,
+    .checkbox:checked:active {}
+    .checkbox:checked {
+        background-color: #44b1dd;
+        border: 1px solid #44b1dd;
+        color: white;
+    }
+    .checkbox:checked:after {
+        content: '\2714';
+        font-size: 14px;
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        color: white;
+    }
+    .confirm {
+        display: none;
+        position: absolute;
+        top: 335px;
+        left: 15px;
+        right: 15px;
+        font-size: 16px;
+        transition: all 0.15s ease-out;
+    }
+    .confirm i {
+        font-weight: bold;
+        text-decoration: underline;
+        font-style: normal;
+    }
+    /*Loader*/
+    #loader {
+        position: absolute;
+        top: -20%;
+        left: -50%;
+        z-index: 5;
+    }
+    /*Menu pannel*/
+    .menu {
+        position: absolute;
+        width: 121px;
+        top: 60%;
+        text-align: center;
+        transform: translateY(-50%);
+    }
+    #tune,
+    #main,
+    #help {
+        margin-left: 55px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-top: 10px;
+        width: 120px;
+        height: 120px;
+        color: black;
+        position: absolute;
+        display: inline-block;
+        position: relative;
+        border: 2px dashed white;
+        background-clip: content-box;
+        background-color: white;
+        padding: 10px;
+        transition: .5s;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .menu .link:hover {
+        font-size: 24px;
+        transform: rotate(360deg);
+    }
+    /*PAGE_2*/
+    /*Team_block*/
+    .team {
+        width: 1346px;
+        height: 100%;
+        overflow: hidden;
+        top: 100%;
+        position: absolute;
+    }
+    .team_bar {
+        background: url(../img/board_team.png) no-repeat;
+        top: 100%;
+        width: 1346px;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+    }
+    .team_bar h2 {
+        width: 100%;
+        position: absolute;
+        font-size: 45px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 3;
+        padding-top: 30px;
+        text-align: center;
+    }
+    /*PAGE_3*/
+    #last_part {
+        background: url(../img/board_team.png) no-repeat;
+        border-width: 15px;
+        position: absolute;
+        top: 200%;
+        height: 100%;
+        width: 1346px;
+    }
+    .text {
+        width: 100%;
+        position: absolute;
+        font-size: 45px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 3;
+        padding-top: 30px;
+        text-align: center;
+    }
+    /*GALLERY*/
+    .article {
+        width: 35%;
+        height: auto;
+        float: left;
+        margin-right: 55px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .article p {
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+        line-height: 20px;
+        padding-top: 20px;
+    }
+    .article h2 {
+        font-size: 30px;
+        color: #44b1dd;
+        font-weight: 600;
+    }
+    .polaroid img {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+    }
+    .gallery {
+        width: 100%;
+        padding-left: 4%;
+        text-align: center;
+        padding-top: 200px;
+        float: right;
+    }
+    .polaroid {
+        background: #44b1dd;
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .caption {
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+    }
+    .item {
+        display: inline-block;
+        filter: grayscale(100%);
+        transform: scale(0.8, 0.8) rotate(5deg);
+        transition: all 0.35s;
+    }
+    .item .polaroid:before {
+        transform: rotate(6deg);
+        height: 20%;
+        width: 47%;
+        bottom: 30px;
+        right: 12px;
+        box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+    }
+    .item:hover {
+        filter: none;
+        transform: scale(1, 1) rotate(0deg);
+        transition: all 0.35s;
+    }
+    #dog {
+        background: url(../img/dog.png) no-repeat;
+        position: absolute;
+        float: left;
+        bottom: 0;
+        z-index: 7;
+        width: 30%;
+        height: 212px;
+    }
+    /*FOOTER*/
+    .footer-wrap {
+        display: block;
+        text-align: center;
+        height: 170px;
+        position: absolute;
+        bottom: -200%;
+        width: 1346px;
+        background-color: black;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        z-index: 5;
+    }
+    .footer-wrap h2 {
+        font-size: 30px;
+        color: white;
+        margin-top: 20px;
+    }
+    .footer-wrap p {
+        color: #44b1dd;
+    }
+    /*Shining animation*/
+    #shine {
+        bottom: -200%;
+        height: 170px;
+        position: absolute;
+        width: 1300px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        animation: glowness 10s linear infinite;
+        margin-left: 20px;
+        z-index: 0;
+    }
+    @keyframes glowness {
+        0% {
+            box-shadow: 0 0 30px #99d8f1;
+        }
+        25% {
+            box-shadow: 0 0 30px #47c1f1;
+        }
+        50% {
+            box-shadow: 0 0 30px #5b4ecc;
+        }
+        75% {
+            box-shadow: 0 0 30px #a899ff;
+        }
+        100% {
+            box-shadow: 0 0 30px #c1b7f7;
+        }
+    }
+    /*Social icons*/
+    .icons {
+        margin: 0 auto;
+        text-align: center;
+        width: 40%;
+        padding-top: 15px;
+    }
+    .icons a {
+        width: 50px;
+        height: 50px;
+        margin: 0 6px;
+        text-align: center;
+        display: inline-block;
+        border: 5px solid #44b1dd;
+        line-height: 25px;
+        border-radius: 50%;
+        color: #44b1dd;
+    }
+    .icons a span {
+        padding-top: 25%;
+    }
+    .icons a:hover {
+        color: #fff;
+        transform: rotate(45deg);
+        transition: all 1000ms ease;
+        border: 5px solid white;
+        border-radius: 15px;
+    }
+    .map {
+        margin-top: 20px;
+        height: 250px;
+        width: auto;
+        border: 5px solid #44b1dd;
+    }
 }
