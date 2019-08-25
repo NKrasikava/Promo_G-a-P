@@ -234,7 +234,7 @@ function drawProgress(go, end) {
 }
 
 function doProgress(go, end) {
-    // в цикле задаем последовательность вызовов фенкции для обновления процентов прогресса
+    // в цикле задаем последовательность вызовов функции для обновления процентов прогресса
     doProgress_run = true;
     IntervalId = setInterval(function() {
 
