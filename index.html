@@ -9,13 +9,10 @@
     <title>Get-a-Pet - animal shelter</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="css/reset.css">
-    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="css/slideWiz.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <!-- <script src="js/jquery-ui.min.js"></script> -->
     <script src="js/slideWiz.js"></script>
     <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500,600&display=swap" rel="stylesheet">
@@ -47,7 +44,7 @@
                 </div>
                 <div class="logo_text">
                     <h2><span>Get-</span>a<span>-Pet</span></h2>
-                    <p>helps pets find homes</p>
+                    <p><span>frendly animal shelter</span><br>helps pets find homes</p>
                 </div>
             </div>
         </header>
@@ -73,101 +70,138 @@
                     <br> with your monthly gift<br> to our lifesaving work!</p>
             </div>
 
-            <form id="DonateForm" action="">
-                Add sum: <input type="text" name="Amount" value="5"><br> Phone:
-                <input type="radio" name="MTS" value="MTS"> MTS
-                <input type="radio" name="A1" value="A1"> A1
-                <input type="radio" name="Life:)" value="Life:)"> Life:)<br>
-                <input type="text" name="Amount" value="+375">
-                <input type="submit" value="Donate">
-            </form>
+            <form id="DonateForm">
+                <div class="donation-box">
+
+                    <h4>Make a gift</h4>
+                    <div class=fields>
+                        <input type="text" id="first name" placeholder="Name"></input>
+                        <input type="text" id="last name" placeholder="Last name"></input>
+                        <input type="text" id="email" placeholder="Email"></input>
+                    </div>
+                    <div class="amount">
+                        <div class="button">$5</div>
+                        <div class="button">$10</div>
+                        <div class="button">$<input type="text" class="set-amount" placeholder=""> </input>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="switch">
+                    <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+                    <label for="one-time" class="switch-label switch-label-off">Once</label>
+                    <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+                    <label for="monthly" class="switch-label switch-label-on">Monthly</label>
+                    <span class="switch-selection"></span>
+                </div>
+
+                <div class="checkboxes">
+                    <input type="checkbox" id="receipt" class="checkbox"></input>
+                    <label for="receipt">Email me a receipt</label>
+                    <br />
+                    <input type="checkbox" id="anon" class="checkbox"></input>
+                    <label for="anon">Give anonymously</label>
+                    <br />
+                    <input type="checkbox" id="list" class="checkbox"></input>
+                    <label for="list">Add me to email list</label>
+                </div>
+
+                <div class="confirm">
+
+                </div>
+
+                <div class="donate-button"><i class="fa fa-credit-card"></i> Donate</div>
         </div>
 
+    </div>
+    </form>
+    </div>
 
 
-        <!-- NAVIGATION -->
-        <nav>
-            <div class="menu">
-                <button id="tune" class="link"><span id="icon-sound" class="fa fa-volume-off fa-3x" aria-hidden="true"></span><p>TUNE</p></button>
-                <audio id="myaudio" loop>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="menu">
+            <button id="tune" class="link"><span id="icon-sound" class="fa fa-volume-off fa-3x" aria-hidden="true"></span><p>TUNE</p></button>
+            <audio id="myaudio" loop>
                             <source src="media/sound.ogg" type="audio/ogg; codecs=vorbis">
                             <source src="media/sound.mp3" type="audio/mp3">
                             <source src="media/sound.wav" type="audio/wav">
                           </audio>
 
-                <button id="main" class="link" onclick="location.href='https://nkrasikava.github.io/Get-a-Pet/'"><i class="fa fa-paw fa-2x" aria-hidden="true"></i><p>MAIN</p></button>
-                <button id="help" class="link" type="submit"><img src="img/help_icon.png" title="help_icon" alt="help_icon.png"><p>HELP</p></button>
+            <button id="main" class="link" onclick="location.href='https://nkrasikava.github.io/Get-a-Pet/'"><i class="fa fa-paw fa-2x" aria-hidden="true"></i><p>MAIN</p></button>
+            <button id="help" class="link" type="submit"><img src="img/help_icon.png" title="help_icon" alt="help_icon.png"><p>HELP</p></button>
 
+        </div>
+    </nav>
+    <main>
+        <div class="team_bar">
+            <h2>Our team</h2>
+        </div>
+        <div class="team">
+            <div class="slide-container">
             </div>
-        </nav>
-        <main>
-            <div class="team_bar">
-                <h2>Our team</h2>
-            </div>
-            <div class="team">
-                <div class="slide-container">
-                </div>
-            </div>
+        </div>
 
-            <!-- GALLERY -->
-            <div id="last_part">
-                <h2 class="text">Lucky in august</h2>
+        <!-- GALLERY -->
+        <div id="last_part">
+            <h2 class="text">Lucky in august</h2>
 
-                <div class="gallery">
-                    <section>
-                        <div class="article">
-                            <h2>IN LOVE WITH DOGS!</h2>
-                            <p>We believe that every pet deserves a loving home. While loving your dog might seem like a simple concept, there's more to than adoring him and spoiling him with treats and toys. Loving your dog is about building a strong bond
-                                with him and acting in his best interest. <br>A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship. If you take the right steps, you can remain in charge while still having
-                                a friendly relationship with a dog.
-                            </p>
-                        </div>
-                    </section>
-                    <div class="item">
-                        <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJcTXnPLhSaISWQ2IKozldLbjRKy8lDYA4KiGHmp3pKwt3JN__">
-                            <div class="caption">Easy & Alex</div>
-                        </div>
+            <div class="gallery">
+                <section>
+                    <div class="article">
+                        <h2>IN LOVE WITH DOGS!</h2>
+                        <p>We believe that every pet deserves a loving home. While loving your dog might seem like a simple concept, there's more to than adoring him and spoiling him with treats and toys. Loving your dog is about building a strong bond with
+                            him and acting in his best interest. A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship. If you take the right steps, you can remain in charge while still having a friendly
+                            relationship with a dog.
+                        </p>
                     </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqk7yKW0Lqm0R_K4Uj03EPSpNipjeyInMCUY29dkY5OMBguf5sQ">
-                            <div class="caption">Foxy & Johanna</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://www.cdc.gov/healthypets/images/man-and-dog-small.jpg">
-                            <div class="caption">Blake & Victor</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://www.kissfm.es/wp-content/uploads/2017/05/ThinkstockPhotos-473571746-e1495241055924-650x526.jpg">
-                            <div class="caption">Luke & Hanna</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://timesofindia.indiatimes.com/thumb/msid-61463185,imgsize-67252,width-400,resizemode-4/61463185.jpg">
-                            <div class="caption">Patrick & John</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://s3-media2.fl.yelpcdn.com/bphoto/L_vmR_W3o96zG1VCKmfqvw/ls.jpg">
-                            <div class="caption">Trisha & Alissa</div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZkTfVF4nHi0p27p2GCVhbnQQWj1h8vdBZrWOqzLCs6khGyJ0">
-                            <div class="caption">Chucky and Andrew</div>
-                        </div>
+                </section>
+                <div class="item">
+                    <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJcTXnPLhSaISWQ2IKozldLbjRKy8lDYA4KiGHmp3pKwt3JN__">
+                        <div class="caption">Easy & Alex</div>
                     </div>
                 </div>
-            </div>
 
-    </div>
+                <div class="item">
+                    <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqk7yKW0Lqm0R_K4Uj03EPSpNipjeyInMCUY29dkY5OMBguf5sQ">
+                        <div class="caption">Foxy & Johanna</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="polaroid"><img src="https://www.cdc.gov/healthypets/images/man-and-dog-small.jpg">
+                        <div class="caption">Blake & Victor</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="polaroid"><img src="https://www.kissfm.es/wp-content/uploads/2017/05/ThinkstockPhotos-473571746-e1495241055924-650x526.jpg">
+                        <div class="caption">Luke & Hanna</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="polaroid"><img src="https://timesofindia.indiatimes.com/thumb/msid-61463185,imgsize-67252,width-400,resizemode-4/61463185.jpg">
+                        <div class="caption">Patrick & John</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="polaroid"><img src="https://s3-media2.fl.yelpcdn.com/bphoto/L_vmR_W3o96zG1VCKmfqvw/ls.jpg">
+                        <div class="caption">Trisha & Alissa</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZkTfVF4nHi0p27p2GCVhbnQQWj1h8vdBZrWOqzLCs6khGyJ0">
+                        <div class="caption">Chucky and Andrew</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
     </main>
     </div>
 

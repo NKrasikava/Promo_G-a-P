@@ -54,7 +54,7 @@ body {
 }
 
 
-/*PART_1_GAME MODE*/
+/*PART_1*/
 
 .moon {
     background: url(../img/moon.png) no-repeat bottom;
@@ -106,6 +106,10 @@ body {
 .logo_text p {
     margin: auto;
     color: #44b1dd;
+}
+
+.logo_text p span {
+    color: #f1a23e;
 }
 
 
@@ -192,22 +196,264 @@ body {
 
 /*Menu_navigation*/
 
-#DonateForm {
+.DonateForm {
+    display: none;
+    width: 400px;
+}
+
+.donation-box {
+    width: 390px;
+    height: 300px;
+    background-color: #F5F5F5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.donation-box h4 {
+    background-color: #44b1dd;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: black;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.donation-box .donate-button {
+    background-color: #44b1dd;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    bottom: 0px;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.donation-box .fields {
+    width: 59%;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+
+.donation-box .fields input {
+    width: 90%;
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border-width: 0px;
+    color: #5C5C5C;
+    font-weight: 500;
+    margin-bottom: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-input-placeholder {
+    color: #cdcdcd;
+    font-size: 15px;
+}
+
+.donation-box .amount {
+    width: 30%;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+}
+
+.donation-box .amount .button {
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 200ms background-color;
+}
+
+.donation-box .amount .button:hover {
+    background-color: #44b1dd;
+}
+
+.donation-box .amount .button.selected {
+    background-color: #44b1dd;
+}
+
+.donation-box .amount .button input {
+    min-width: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    border-bottom: 2px dashed white;
+    transition: all 0.15s ease-out;
+}
+
+.set-amount {
+    max-width: 96px;
+}
+
+.switch {
+    position: absolute;
+    top: 325px;
+    left: 15px;
+    margin: 20px auto;
+    height: 26px;
+    width: 46%;
+    background: white;
+    border-radius: 3px;
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 46%;
+    line-height: 26px;
+    font-size: 11px;
+    color: #5C5C5C;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch-label:active {
+    font-weight: bold;
+}
+
+.switch-label-off {
+    padding-left: 2px;
+}
+
+.switch-label-on {
+    padding-right: 2px;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked+.switch-label {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    transition: 0.15s ease-out;
+}
+
+.switch-input:checked+.switch-label-on~.switch-selection {
+    left: 114px;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    width: 43%;
+    height: 22px;
+    background: #44b1dd;
+    border-radius: 3px;
+    background-color: #44b1dd;
+    transition: left 0.15s ease-out;
+}
+
+.checkboxes {
+    position: absolute;
+    top: 375px;
+    left: 13px;
+}
+
+.checkboxes label {
+    position: relative;
+    top: -8px;
+    font-size: 13px;
+    color: gray;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #44b1dd;
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    transition: all 0.15s ease-out;
+}
+
+.checkbox:active,
+.checkbox:checked:active {}
+
+.checkbox:checked {
+    background-color: #44b1dd;
+    border: 1px solid #44b1dd;
+    color: white;
+}
+
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: white;
+}
+
+.confirm {
+    display: none;
+    position: absolute;
+    top: 335px;
+    left: 15px;
+    right: 15px;
+    font-size: 16px;
+    transition: all 0.15s ease-out;
+}
+
+.confirm i {
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+
+/* #DonateForm {
     display: none;
     width: 400px;
     height: 100px;
     border-radius: 10px;
     background-color: #f1a23e;
     margin-top: 10px;
-}
+} */
 
-#DonateForm input {
+
+/* #DonateForm input {
     background-color: black;
     color: white;
     border: 2px solid white;
     border-radius: 5px;
     text-align: center;
-}
+} */
 
 #loader {
     width: 200px;
@@ -317,7 +563,7 @@ body {
     height: auto;
     float: left;
     margin-right: 55px;
-    text-align: left;
+    text-align: right;
     padding-top: 30px;
 }
 
