@@ -80,12 +80,11 @@ body {
 }
 
 .logo_plate {
-    background: url(../img/logo_plate.png) no-repeat;
-    width: 50%;
-    height: 30%;
+    /* width: 50%;
+    height: 30%; */
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 .logo_text {
@@ -196,25 +195,6 @@ body {
 
 
 /*Form*/
-
-
-/* #DonateForm {
-    display: none;
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #f1a23e;
-    margin-top: 10px;
-} */
-
-
-/* #DonateForm input {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-align: center;
-} */
 
 .hero_all {
     position: absolute;
@@ -395,7 +375,7 @@ input::placeholder {
     z-index: 1;
     top: 2px;
     left: 2px;
-    width: 43%;
+    width: 46%;
     height: 22px;
     background: #44b1dd;
     border-radius: 3px;
@@ -469,7 +449,7 @@ input::placeholder {
     position: absolute;
     top: -20%;
     left: -50%;
-    z-index: 55;
+    z-index: 5;
 }
 
 
