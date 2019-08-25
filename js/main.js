@@ -90,6 +90,23 @@ $(document).ready(function() { // функции выполняются посл
     $("#help").on('click', ShowDonateForm);
     $("#DonateForm").on('submit', ProcessDonate);
     $("#loader").on('click', StartRocket);
+
+
+    // Draw the map with Minsk location
+    var map = new ol.Map({
+    target: 'map',
+    layers: [
+        new ol.layer.Tile({
+        source: new ol.source.OSM()
+        })
+    ],
+    view: new ol.View({
+        center: ol.proj.fromLonLat([27.56667,53.9]),
+        zoom: 6
+    })
+    });
+
+
 });
 
 // Launch the rocket
@@ -111,10 +128,7 @@ function StartRocket() {
         });
 
         // hide smoke after 1 second after rocket start
-        setTimeout(function() {
-            $("#smoke").css("display", "none");
-            doProgress_run = false;
-        }, 1000);
+        $("#smoke").css("display", "none");
 
     }
 }

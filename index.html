@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/slideWiz.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
     <script src="js/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
 </head>
 
 
@@ -70,6 +72,7 @@
                     <br> with your monthly gift<br> to our lifesaving work!</p>
             </div>
 
+
             <form id="DonateForm">
                 <div class="donation-box">
 
@@ -111,6 +114,16 @@
                 </div>
 
                 <div class="donate-button"><i class="fa fa-credit-card"></i> Donate</div>
+
+                <!-- <form id="DonateForm" action="">
+                Add sum: <input type="text" name="Amount" value="5"><br> Phone:
+                <input type="radio" name="provider" value="MTS"> MTS
+                <input type="radio" name="provider" value="A1"> A1
+                <input type="radio" name="provider" value="Life:)"> Life:)<br>
+                <input type="text" name="Amount" value="+375">
+                <input type="submit" value="Donate">
+            </form> -->
+
         </div>
 
     </div>
@@ -151,10 +164,11 @@
                 <section>
                     <div class="article">
                         <h2>IN LOVE WITH DOGS!</h2>
-                        <p>We believe that every pet deserves a loving home. While loving your dog might seem like a simple concept, there's more to than adoring him and spoiling him with treats and toys. Loving your dog is about building a strong bond with
-                            him and acting in his best interest. A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship. If you take the right steps, you can remain in charge while still having a friendly
-                            relationship with a dog.
-                        </p>
+                        <!-- <p>We believe that every pet deserves a loving home. While loving your dog might seem like a simple concept, there's more to than adoring him and spoiling him with treats and toys. Loving your dog is about building a strong bond
+                                with him and acting in his best interest. A well-loved dog will feel safe and secure, yet still know and follow the rules of canine citizenship. If you take the right steps, you can remain in charge while still having a
+                                friendly relationship with a dog.
+                            </p> -->
+                        <div id="map" class="map"></div>
                     </div>
                 </section>
                 <div class="item">

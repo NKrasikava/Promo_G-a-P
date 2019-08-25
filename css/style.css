@@ -76,7 +76,7 @@ body {
     align-items: center;
     padding-left: 75px;
     padding-top: 25px;
-    z-index: 3;
+    z-index: 1;
 }
 
 .logo_plate {
@@ -85,7 +85,7 @@ body {
     height: 30%;
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 1;
 }
 
 .logo_text {
@@ -186,11 +186,10 @@ body {
 
 #smoke {
     display: none;
-    width: 200%;
+    width: 100%;
     height: auto;
     position: absolute;
-    padding-left: 30%;
-    bottom: 0;
+    bottom: -5%;
 }
 
 
@@ -456,11 +455,10 @@ body {
 } */
 
 #loader {
-    width: 200px;
     position: absolute;
-    top: -30%;
-    left: -80%;
-    z-index: 5;
+    top: -20%;
+    left: -50%;
+    z-index: 55;
 }
 
 .menu {
@@ -737,3 +735,8 @@ body {
     border: 5px solid white;
     border-radius: 15px;
 }
+
+.map {
+    height: 400px;
+    width: 100%;
+  }
