@@ -148,9 +148,32 @@ function ShowDonateForm() {
     doProgress(0, DonateProgress_value);
 }
 
+function checkForm() {
+    // Just check the donate amount
+    var amount = parseInt(document.forms["DonateForm"]["Amount"].value);
+    if (!Number.isInteger(amount)) {
+        alert("Enter a correct amount of donation");
+        return false;
+    }
+    // we get here in case amount is a correct number. Now check if it positive
+    if (amount < 0) {
+        alert("Enter a positive amount of donation");
+        return false;
+    }
+
+    // If we get here - all checks are passed
+    return true;
+
+}
+
 function ProcessDonate(event) {
     console.log("clicked");
     event.preventDefault(); //  чтобы не перерисовывать страницу
+
+    // check the input data
+    if (!checkForm()) {
+        return;
+    }
 
     if (doProgress_run) {
         return;
