@@ -475,8 +475,9 @@ input::placeholder {
     display: inline-block;
     position: relative;
     border: 2px dashed white;
-    background-clip: content-box;
     background-color: white;
+    /*background-clip: content-box; Определяет, как цвет фона или фоновая картинка должна выводиться под границами. В данном случае фон отображается только внутри контента. */
+    background-clip: content-box;
     padding: 10px;
     transition: .5s;
     font-size: 18px;
