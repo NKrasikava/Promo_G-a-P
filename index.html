@@ -33,7 +33,7 @@
     <div class="wrapper">
 
         <div id="video-bg">
-            <video width="100%" height="auto" autoplay loop muted poster="media/space.jpg">
+            <video loop muted autoplay poster="media/space.jpg">
                                 <source src="media/space.mp4" type="video/mp4">
                                 <source src="media/space.ogv" type="video/ogg">
                                 <source src="media/space.webm" type="video/webm">
@@ -61,7 +61,7 @@
             <!-- PROGRESS LOADER -->
             <canvas id="loader"></canvas>
             <img id="flame" src="animate_CC/flame/flame.gif" title="flame" alt="flame.gif">
-            <div><img id="smoke" src="animate_CC/steam/steam.gif"></div>
+            <div><img id="smoke" src="animate_CC/steam/steam.gif" title="steam" alt="steam.gif"></div>
         </div>
 
         <!-- BLOCK HERO -->
@@ -71,12 +71,12 @@
 
                     <h4>Make a gift</h4>
                     <div class=fields>
-                        <input type="text" id="first name" placeholder="Name"></input>
-                        <input type="text" id="last name" placeholder="Last name"></input>
-                        <input type="text" id="email" placeholder="Email"></input>
+                        <input type="text" id="first_name" placeholder="Name">
+                        <input type="text" id="last_name" placeholder="Last name">
+                        <input type="text" id="email" placeholder="Email">
                     </div>
                     <div class="amount">
-                        <div class="button">$ <input name="Amount" type="text" class="set-amount" value="5"></input>
+                        <div class="button">$ <input name="Amount" type="text" class="set-amount" value="5">
                         </div>
                         <button type="submit" class="donate-button"><i class="fa fa-credit-card"></i> Donate</button>
                     </div>
@@ -89,15 +89,15 @@
                     </div>
 
                     <div class="checkboxes">
-                        <input type="checkbox" id="receipt" class="checkbox"></input>
+                        <input type="checkbox" id="receipt" class="checkbox">
                         <label for="receipt">Email me a receipt</label>
                         <br />
-                        <input type="checkbox" id="list" class="checkbox"></input>
+                        <input type="checkbox" id="list" class="checkbox">
                         <label for="list">Add me to email list</label>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
         <div class="block_hero">
             <h2>Become a hero!</h2>
             <div class="text_box">
@@ -107,20 +107,19 @@
             </div>
         </div>
     </div>
-    </div>
 
     <!-- NAVIGATION -->
     <nav>
         <div class="menu">
-            <button id="tune" class="link"><span id="icon-sound" class="fa fa-volume-off fa-3x" aria-hidden="true"></span><p>TUNE</p></button>
+            <button id="tune" class="link"><span id="icon-sound" class="fa fa-volume-off fa-3x" aria-hidden="true"></span>TUNE</button>
             <audio id="myaudio" loop>
                             <source src="media/sound.ogg" type="audio/ogg; codecs=vorbis">
                             <source src="media/sound.mp3" type="audio/mp3">
                             <source src="media/sound.wav" type="audio/wav">
                           </audio>
 
-            <button id="main" class="link" onclick="window.open('https://nkrasikava.github.io/Get-a-Pet/', '_blank');"><i class="fa fa-paw fa-2x" aria-hidden="true"></i><p>MAIN</p></button>
-            <button id="help" class="link" type="submit"><img src="img/help_icon.png" title="help_icon" alt="help_icon.png"><p>HELP</p></button>
+            <button id="main" class="link" onclick="window.open('https://nkrasikava.github.io/Get-a-Pet/', '_blank');"><i class="fa fa-paw fa-2x" aria-hidden="true"></i>MAIN</button>
+            <button id="help" class="link" type="submit"><img src="img/help_icon.png" title="help_icon" alt="help_icon.png">HELP</button>
 
         </div>
     </nav>
@@ -189,10 +188,7 @@
                 </div>
             </div>
         </div>
-
-        </div>
     </main>
-    </div>
 
     <footer>
 
