@@ -178,17 +178,17 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(39).to({_off:false},0).to({x:142,y:74.25},4).to({x:151.95,y:83.5},6).to({x:164.95,y:86},10).to({scaleX:1.566},10).wait(49).to({_off:true},1).wait(18));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(130.1,47.5,121.80000000000001,77.9);
+p.nominalBounds = new cjs.Rectangle(130.1,53,121.80000000000001,72.4);
 // library properties:
 lib.properties = {
 	id: '3CA946E9450C7F4B8628D1A20EB74088',
 	width: 255,
-	height: 91,
+	height: 102,
 	fps: 30,
 	color: "#535353",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/steam_atlas_.png?1566726357203", id:"steam_atlas_"}
+		{src:"images/steam_atlas_.png?1566922140994", id:"steam_atlas_"}
 	],
 	preloads: []
 };
