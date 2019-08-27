@@ -40,7 +40,7 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/girl_1.png"
         },
         title: 'Amanda Burrington',
-        desc: 'I’m a volunteer on the G-a-P dog team – walking dogs at the center and participating in the "Little noses" program. ',
+        desc: 'I’m a volunteer in the "Get-a-Pet" dog team – walking dogs at the center and participating in the "Little noses" program. ',
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Amanda',
@@ -54,7 +54,7 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/guy_1.png"
         },
         title: 'Kurt Lockwood',
-        desc: 'I started volunteering in 2015 and since that time have no chance to stop helping homeless dogs. ',
+        desc: 'I started volunteering in he "Get-a-Pet" in 2015 and since that time have no chance to stop helping homeless dogs. ',
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Kurt',
@@ -68,7 +68,7 @@ $(document).ready(function() { // функции выполняются посл
             cover: "img/girl_2.png"
         },
         title: 'Ingrid Lewis',
-        desc: 'I’ve basically been an animal lover since I was born. So now I am here and try to do my best! ',
+        desc: 'I’ve basically been an animal lover since I was born. So now I am here in the "G-a-P" and try to do my best! ',
         btnTitle: 'Action Button',
         button: {
             text: 'Saved by Ingrid',

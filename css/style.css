@@ -732,6 +732,18 @@ input::placeholder {
     border: 5px solid #44b1dd;
 }
 
+.contact {
+    position: absolute;
+    bottom: 35px;
+    right: 100px;
+    z-index: 7;
+    width: 20%;
+    height: auto;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
 
 /*********************************************** MEDIA ************************************************/
 
@@ -1292,5 +1304,16 @@ input::placeholder {
         height: 250px;
         width: auto;
         border: 5px solid #44b1dd;
+    }
+    .contact {
+        position: absolute;
+        bottom: 35px;
+        right: 100px;
+        z-index: 7;
+        width: 20%;
+        height: auto;
+        line-height: 15px;
+        font-size: 16px;
+        text-align: right;
     }
 }
