@@ -167,7 +167,6 @@ function checkForm() {
 }
 
 function ProcessDonate(event) {
-    console.log("clicked");
     event.preventDefault(); //  чтобы не перерисовывать страницу
 
     // check the input data
@@ -179,7 +178,7 @@ function ProcessDonate(event) {
         return;
     }
 
-    var donate_val = $("input[name=Amount]").val();
+    var donate_val = parseInt(document.forms["DonateForm"]["Amount"].value);
 
     if (donate_val > 0) {
         Next_val = DonateProgress_value + parseInt(donate_val);
