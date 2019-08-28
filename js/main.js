@@ -13,7 +13,7 @@ var text_area_radius;
 
 $(document).ready(function() { // функции выполняются после загрузки дом-дерева;
     /*LOADER_LOGO - срабатывает предзагрузчик в формате .gif*/
-    $('#before-load').find('span').fadeOut().end().delay(100).fadeOut('slow');
+    $('#before-load').find('span').fadeOut().end().delay(8000).fadeOut('slow');
 
     /*Вешаем обработчик события на кнопку с идентификатором tune*/
     document.getElementById("tune").onclick = function() {
