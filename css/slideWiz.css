@@ -11,6 +11,7 @@
     float: left;
     position: absolute;
     overflow: hidden;
+    -o-object-fit: contain;
     object-fit: contain;
     bottom: 0;
     z-index: 10;
@@ -21,24 +22,22 @@
 
 .slice {
     opacity: 1.0;
-    !important;
     display: block;
-    !important;
     height: 100%;
     float: left;
     position: relative;
+    -webkit-transition: all .8s cubic-bezier(.175, .885, .32, 1.275);
+    -o-transition: all .8s cubic-bezier(.175, .885, .32, 1.275);
     transition: all .8s cubic-bezier(.175, .885, .32, 1.275);
     overflow: hidden;
 }
 
 .slice img {
     max-width: none;
-    !important;
     width: 100%;
-    !important;
     height: 100%;
-    !important;
     float: left;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -52,7 +51,10 @@
     right: 150px;
     z-index: 10;
     border-radius: 5px;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
 }
@@ -63,6 +65,7 @@
 .main-image-box img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -76,9 +79,13 @@
     position: absolute;
     right: 30px;
     z-index: 10;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.7);
+    background: -webkit-gradient(linear, right top, left top, from(rgba(47, 180, 233, 0)), to(rgba(0, 0, 0, 1)));
+    background: -o-linear-gradient(right, rgba(47, 180, 233, 0) 0%, rgba(0, 0, 0, 1) 100%);
     background: linear-gradient(to left, rgba(47, 180, 233, 0) 0%, rgba(0, 0, 0, 1) 100%);
     overflow: hidden;
 }
