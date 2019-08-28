@@ -258,6 +258,8 @@ function drawProgress(go, end) {
 function doProgress(go, end) {
     // в цикле задаем последовательность вызовов функции для обновления процентов прогресса
     doProgress_run = true;
+
+    clearInterval(IntervalId);
     IntervalId = setInterval(function() {
 
         if (step > end - go) {
